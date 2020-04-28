@@ -1,2 +1,88 @@
 .header
 	background-color $header-bg
+	&-top
+		padding 10px 0
+		
+	&__contacts
+		margin-right 50px
+		display flex
+		align-items center
+		justify-content flex-start
+	
+		&--col
+			flex 1
+			margin-right 25px
+			
+			
+
+	&__contact
+		margin-right 50px
+		color $darken-secondary-color
+		font 1.25em $Reg
+		a
+			color inherit
+			&:hover
+				color $accent-color
+		&:last-child
+			margin-right 0
+			
+	&-center
+		padding 15px 0
+		
+	&__phones
+		flex 1
+		padding-left 50px
+		padding-right 50px
+		margin 0 50px
+		border-left 1px solid #d9e4ef
+		border-right  1px solid #d9e4ef
+		display flex
+		justify-content space-around
+		align-items center
+		
+		div
+			margin-right 30px
+			&:last-child
+				margin-right 0
+				
+
+	&-cart
+		display inline-block
+		padding-left 45px
+		position relative
+		font 16px $Bold
+		color $darken-secondary-color
+		&__wrapper
+			min-width 150px
+		&__ic
+			display block
+			width 22px
+			height 22px
+			position absolute
+			left 0
+			vertical-center()
+			svg
+				svg()
+				fill $secondary-color
+				
+		&__count
+			flex-col-center()
+			border-radius 50%
+			width 24px
+			height 24px
+			background-color $accent-color
+			color $light-color
+			font 12px $Med
+			position absolute
+			top -12px
+			left 12px
+			z-index 1
+			
+		.price
+			display inline-block
+
+			
+		&:hover
+			color $accent-color
+			svg
+				fill $accent-color

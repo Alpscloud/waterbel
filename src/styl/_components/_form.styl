@@ -1,6 +1,46 @@
-.form
-	max-width 600px
-	margin 40px auto
+input[type="search"]
+	appearance none
+	-webkit-appearance none			
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration
+	appearance none
+	-webkit-appearance none
+	backface-visibility hidden
+	transform translate3d(0,0,0)
+	
+.search
+	&__wrapper
+		flex none
+		width 260px
+		
+	&-input
+		display block
+		width 100%
+		border 1px solid transparent
+		color $dark-color
+		font 14px $Reg
+		padding 12px 45px 12px 12px
+		background-color $search-input-bg
+		&::-webkit-input-placeholder
+			font 14px $Reg
+			color $text-color
+		&::-moz-placeholder
+			font 14px $Reg
+			color $text-color
+		&:-moz-placeholder
+			font 14px $Reg
+			color $text-color
+		&:-ms-input-placeholder
+			font 14px $Reg
+			color $text-color
+		&:hover,
+		&:focus
+			border-color $accent-color
+		&__wrapper
+			position relative
 	
 .input
 	display block

@@ -1,0 +1,88 @@
+.with-ic
+	position relative
+	padding-left 25px
+	&:before
+		pseudo()
+		position absolute
+		vertical-center()
+		left 0
+		width 16px
+		height 16px
+		background-size 16px 16px
+		background-position 50% 50%
+		background-repeat no-repeat
+	
+.ic
+	&-address
+		&:before
+			background-image url('../img/icons/svg/header_top_location.svg')
+	&-worktime
+		&:before
+			background-image url('../img/icons/svg/header_top_time.svg')
+	&-mail
+		&:before
+			background-image url('../img/icons/svg/header_top_mail.svg')
+			
+
+
+.socials
+	font-size 0
+	&__item
+		display inline-block
+		margin-right 20px
+		&:last-child
+			margin-right 0
+	&__link
+		display block
+		width 16px
+		height 16px
+		opacity .6
+		&:hover
+			opacity 1
+		
+		&--ic
+			display block
+			width 100%
+			height 100%
+		
+		svg
+			svg()
+			fill $accent-color
+			
+
+.phones
+	position relative
+	padding-left 35px
+	display flex
+	flex-direction column
+	
+	&:before
+		pseudo()
+		position absolute
+		vertical-center()
+		left 0
+		background-repeat no-repeat
+		background-position 50% 50%
+		width 18px
+		height 32px
+		
+	&-mob
+		&:before
+			background-image url('../img/icons/svg/header_cellphone.svg')
+			background-size 18px 32px
+			
+	&-home
+		&:before
+			background-image url('../img/icons/svg/header_phone.svg')
+			background-size 18px 18px
+			
+	&__link
+		display inline-block
+		line-height 1
+		color $darken-secondary-color
+		margin-bottom 3px
+		font 22px $Med
+		&:last-child
+			margin-bottom 0
+		&:hover
+			color $accent-color
