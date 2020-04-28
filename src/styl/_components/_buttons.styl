@@ -1,19 +1,41 @@
 .btn
 	display inline-block
-	padding 12px 15px
-	font 1em $Reg
-	line-height 1
 	text-align center
-	color $text-color
-	border 2px solid transparent
+	border-radius 100px
+	font 12px $Bold
+	outline none
 	transition all .17s ease-in-out
-	backface-visibility hidden
-	&__accent
+	line-height 1
+	color $accent-color
+	text-transform uppercase
+	@extends .letter-spacing
+	border 2px solid transparent
+	padding 22px 30px
+	
+	&:hover
+		background-color $dark-accent-color
+		
+	&-accent
 		background-color $accent-color
-	&__shadow
+		color $light-color
+		&:hover
+			background-color $light-color
+			color $accent-color
+			
+	&-light
+		background-color $light-color
+		color $accent-color
+		&:hover
+			background-color $accent-color
+			color $light-color
+	
+	&-shadow
 		background-color transparent
-	&__dark
-		background-color $dark-color
+		border-color $accent-color
+		&:hover
+			background-color $accent-color
+			color $light-color
+			
 	&__close
 		display inline-block
 		width 20px

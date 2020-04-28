@@ -109,8 +109,20 @@ img
 	
 .sect
 	&__title
-		font 2em $Bold
-		margin-bottom 40px
+		font 42px $ExBold
+		color $dark-secondary-color
+		position relative
+		margin-bottom 100px
+		&--with-logo
+			&:before
+				pseudo()
+				position absolute
+				position-center()
+				z-index -1
+				width 100px
+				height 80px
+				background url('../img/title-logo.svg') 50% 50% no-repeat / 100px 80px
+				pointer-events none
 		
 
 

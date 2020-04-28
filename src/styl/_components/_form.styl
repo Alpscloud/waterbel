@@ -45,34 +45,56 @@ input[type="search"]::-webkit-search-results-decoration
 .input
 	display block
 	width 100%
-	padding 10px 15px
-	text-align left
-	background-color $light-color
-	border 2px solid transparent
-	font 1em $Reg
+	padding 20px
+	text-align center
+	background-color $input-bg
+	border 2px solid $accent-color
+	font 14px $Reg
 	color $text-color
+	border-radius 100px
 	&:hover,
 	&:focus
-		border-color $accent-color
+		border-color $dark-secondary-color
 	&::-webkit-input-placeholder
-		font 1em $Reg
-		color $text-color
+		font 14px $Reg
+		color rgba($dark-secondary-color, .75)
 	&::-moz-placeholder
-		font 1em $Reg
-		color $text-color
+		font 14px $Reg
+		color rgba($dark-secondary-color, .75)
 	&:-moz-placeholder
-		font 1em $Reg
-		color $text-color
+		font 14px $Reg
+		color rgba($dark-secondary-color, .75)
 	&:-ms-input-placeholder
-		font 1em $Reg
-		color $text-color
+		font 14px $Reg
+		color rgba($dark-secondary-color, .75)
 		
 	&__wrapper
-		margin-bottom 15px
+		margin-bottom 20px
 		position relative
+		&:last-child
+			margin-bottom 0
 		
 	&.is-error
 		border-color red
+		
+	&-light
+		color $light-color
+		border-color #9bb7d3
+		background-color #125397
+		&:hover
+			border-color $accent-color
+		&::-webkit-input-placeholder
+			font 14px $Reg
+			color $light-color
+		&::-moz-placeholder
+			font 14px $Reg
+			color $light-color
+		&:-moz-placeholder
+			font 14px $Reg
+			color $light-color
+		&:-ms-input-placeholder
+			font 14px $Reg
+			color $light-color
 	
 
 
