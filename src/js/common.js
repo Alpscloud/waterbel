@@ -17,5 +17,19 @@ $(document).ready(function() {
 		}, 200);
 	});
 
+	var promoSlider = new Swiper('.js-promo-slider', {
+		speed: 700,
+		pagination: {
+			el: '.js-promo-slider-pagination',
+			clickable: true
+		},
+		touchRatio: 0,
+		autoplay: {
+			delay: 5000,
+			disableOnInteraction: false,
+
+		},
+	});
+
 
 });

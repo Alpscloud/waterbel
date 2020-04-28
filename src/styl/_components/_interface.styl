@@ -23,7 +23,41 @@
 		&:before
 			background-image url('../img/icons/svg/header_top_mail.svg')
 			
-
+.tooltip
+	position absolute
+	text-align center
+	display inline-block
+	padding 5px 8px
+	background-color $dark-secondary-color
+	color $light-color
+	border-radius 3px
+	horisontal-center()
+	z-index 2
+	font 11px $Reg
+	white-space nowrap
+	letter-spacing 0
+	top 100%
+	opacity 0
+	visibility hidden
+	margin-top 15px
+	transition all .17s ease-in-out
+	&:before
+		pseudo()
+		width 0
+		height 0
+		border-style solid
+		border-width 0 5px 5px 5px
+		border-color transparent transparent $dark-secondary-color transparent
+		position absolute
+		horisontal-center()
+		top -4px
+	&__wrapper
+		position relative
+		&:hover
+			.tooltip
+				opacity 1
+				visibility visible
+				margin-top 5px
 
 .socials
 	font-size 0

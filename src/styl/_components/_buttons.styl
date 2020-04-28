@@ -77,6 +77,40 @@
 			color $light-color
 			svg
 				fill $light-color
+				
+	&__with-logo
+		display inline-block
+		position relative
+		border-radius 70px
+		background-color $accent-color
+		color $light-color
+		padding 22.5px 85px 22.5px 25px
+		text-transform uppercase
+		font 12px $Bold
+		will-change transform
+		backface-visibility hidden
+		&_logo
+			position absolute
+			right 0
+			vertical-center()
+			border-radius 50%
+			background-color $dark-accent-color
+			flex-col-center()
+			padding 5px
+			width 60px
+			height 60px
+			transition background-color .17s ease-in-out
+			img
+				@extends .content-img
+				max-width 30px
+				max-height 30px
+				transition transform .17s ease-in-out
+		&:hover
+			background-color $dark-accent-color
+			.btn__with-logo_logo
+				background-color $accent-color
+			img
+				transform rotate(-15deg)
 		
 	&__top
 		display none

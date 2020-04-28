@@ -17,3 +17,71 @@
 			opacity 0
 			visibility hidden
 			pointer-events none
+
+.swiper-container
+	*
+		box-sizing border-box			
+// Promo
+.promo
+	
+	&-slide
+		position relative
+		&__bg
+			padding-top 40%
+		&__content
+			position absolute
+			position-center()
+			width 100%
+			z-index 1
+			&--block
+				max-width 50%
+		&__title
+			font 56px $Bold
+			color $dark-secondary-color
+
+		&__text
+			font-size 24px
+			color $light-text-color
+			margin-top 50px
+			b, strong
+				font-family $Med
+				
+		&__price
+			color $accent-color
+			margin-top 40px
+			font 40px $Bold
+			
+		.btn__with-logo
+			margin-top 60px
+			
+	&__slider
+		position relative
+		&--pagination
+			position absolute
+			position-center()
+			z-index 2
+			pointer-events none
+			display flex
+			flex-direction column
+			align-items flex-end
+			span
+				pointer-events auto
+				
+			.swiper-pagination-bullet
+				width 14px
+				height 14px
+				border-radius 50%
+				border 2px solid $secondary-color
+				background-color transparent
+				transition all .17s ease-in-out
+				opacity 1
+				outline none
+				margin-bottom 30px
+				&:last-child
+					margin-bottom 0
+				&:hover,
+				&-active
+					background-color $secondary-color
+					
+			
+			
