@@ -77,6 +77,15 @@
 		font-size 18px
 		margin-bottom 30px
 		line-height 1.9
+		
+	&__notice
+		font-size 12px
+		margin-top 10px
+		a
+			color inherit
+			text-decoration underline
+			&:hover
+				text-decoration none
 
 .input__col
 	padding 15px
@@ -189,4 +198,196 @@
 				
 		&--block
 			max-width 750px
+
+
+// Advantages
+.advantages
+	&__row
+		margin-left -80px
+		margin-right -80px
+	&__items
+		width 50%
+		padding 15px 80px
+	&__cards
+		width 50%
+		padding 0 65px
+		display flex
+		flex-wrap wrap
+		justify-content flex-start
+		
+.advantage
+	margin-bottom 50px
+	&:last-child
+		margin-bottom 0
+	.block-with-ic__title
+		font-size 24px
+		margin-bottom 15px
+		
+	&-card
+		border-radius 5px
+		background-color $secondary-color
+		background-repeat no-repeat
+		flex-col-center()
+		color $light-color
+		height 100%
+		text-align center
+		&__num
+			font 60px $ExBold
+			display block
+			margin-bottom 20px
+		
+		&__wrapper
+			width 50%
+			padding 15px
 			
+			&:nth-child(1)
+				.advantage-card
+					background-image url('../img/backgrounds/waves/1.png')
+					background-position bottom left
+			&:nth-child(2)
+				.advantage-card
+					background-image url('../img/backgrounds/waves/2.png')
+					background-position bottom left
+			&:nth-child(3)
+				.advantage-card
+					background-image url('../img/backgrounds/waves/3.png')
+					background-position top left
+			&:nth-child(4)
+				.advantage-card
+					background-image url('../img/backgrounds/waves/4.png')
+					background-position top left
+			
+// Gallery
+.gallery
+	&-item
+		display block
+		overflow hidden
+		padding-top 62%
+		
+		
+		&__wrapper
+			padding 15px
+			
+	&__col
+		width 33.3333%
+		&:nth-child(2)
+			.gallery-item
+				padding-top 0
+				height 100%
+				&__wrapper
+					height 100%
+					
+// Feedbacks
+.sect__feedbacks
+	padding 100px 0
+	
+	
+.feedbacks
+	&__block
+		max-width 750px
+		.sect__title
+			margin-bottom 60px	
+			
+//Clients
+.client
+	flex-col-center()
+	padding 20px
+	border 1px solid $border-color
+	background-color $light-color
+	height 100%
+	img
+		@extends .content-img
+	&:hover
+		border-color $accent-color
+		box-shadow 0px 10px 40px 0px rgba(0, 0, 0, 0.08)
+		
+	&__wrapper
+		width 25%
+		padding 15px 
+
+// Articles
+
+.article-card
+	&__thumbnail
+		display block
+		overflow hidden
+		border-radius 5px
+		height 250px
+		position relative
+		backface-visibility hidden
+		
+		img
+			position absolute
+			position-center()
+			width 100%
+			height 100%
+			will-change transform
+			transition transform .17s ease-in-out
+		&:hover
+			img
+				transform translate(-50%, -50%) scale(1.05, 1.05)
+		&--wrapper
+			margin-bottom 30px
+			position relative
+	
+	&__date
+		position absolute
+		top 20px
+		left 0
+		z-index 1
+		background-color $accent-color
+		width 110px
+		flex-col-center()
+		text-align center
+		font 12px $Med
+		color $light-color
+		padding 10px
+		&:before
+			pseudo()
+			height 100%
+			position absolute
+			right 100%
+			top 0
+			background-color $accent-color
+			width 10px
+		&:after
+			pseudo()
+			position absolute
+			right 100%
+			top 100%
+			width 0
+			height 0
+			border-style solid
+			border-width 0 10px 5px 0
+			border-color transparent $accent-color transparent transparent
+	&__content		
+		p
+			margin-bottom 30px
+			
+	&__title
+		color $dark-secondary-color
+		font 18px $Bold
+		margin-bottom 20px
+		a
+			color inherit
+			border-bottom 1px solid transparent
+			&:hover
+				color $secondary-color
+				border-color inherit
+	&__wrapper
+		width 25%
+		padding 15px
+		
+// Section seo
+.sect__seo
+	background url('../img/backgrounds/water-top.png') top center no-repeat / auto 556px
+	padding-top 420px
+	padding-bottom 200px
+	
+	.sect__title
+		margin-bottom 60px
+		
+.seo-content
+	padding-right 130px
+	p
+		margin-bottom 30px

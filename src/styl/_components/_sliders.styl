@@ -17,6 +17,29 @@
 			opacity 0
 			visibility hidden
 			pointer-events none
+			
+	&__pagination
+		.swiper-pagination-bullet
+			width 10px
+			height 10px
+			border-radius 50%
+			border 2px solid $secondary-color
+			background-color transparent
+			transition all .17s ease-in-out
+			opacity 1
+			outline none
+			margin-right 10px
+			&:last-child
+				margin-right 0
+			&:hover,
+			&-active
+				background-color $secondary-color
+		&--accent
+			.swiper-pagination-bullet
+				border-color $accent-color
+				&:hover,
+				&-active
+					background-color $accent-color
 
 .swiper-container
 	*
@@ -82,6 +105,27 @@
 				&:hover,
 				&-active
 					background-color $secondary-color
+					
+// Feedbacks slider
+.feedbacks
+	&__slider
+		margin-bottom 50px
+		
+		.slider__pagination
+			margin-top 35px
+			
+.feedback-slide
+	&__text
+		padding-top 75px
+		background url('../img/icons/svg/reviews_quote.svg') top left no-repeat / 40px 30px
+		font 18px $Italic
+		line-height 1.9
+		color $light-text-color
+		margin-bottom 35px
+		
+	&__information
+		color $light-text-color
+		font-size 18px
 					
 			
 			

@@ -31,5 +31,23 @@ $(document).ready(function() {
 		},
 	});
 
+	var feedbacksSlider = new Swiper('.js-feedbacks-slider', {
+		speed: 700,
+		pagination: {
+			el: '.js-feedbacks-slider-pagination',
+			clickable: true
+		},
+		autoplay: {
+			delay: 5000,
+			disableOnInteraction: false,
+
+		},
+	});
+
+	$('[data-fancybox="gallery"]').fancybox({
+		loop: true,
+		buttons: ['close']
+	});
+
 
 });

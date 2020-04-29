@@ -120,3 +120,40 @@
 			margin-bottom 0
 		&:hover
 			color $accent-color
+			
+.fancy-link
+	position relative
+	&:before
+		pseudo()
+		position absolute
+		fullSize()
+		transition opacity .17s ease-in-out
+		background-color rgba($secondary-color, .75)
+		opacity 0
+	&:after
+		pseudo()
+		position absolute
+		position-center()
+		width 40px
+		height 40px
+		background url('../img/icons/svg/gallery_hover_zoom.svg') 50% 50% no-repeat / 40px 40px
+		z-index 1
+		transition all .17s ease-in-out
+		opacity 0
+		margin-top 20px
+		
+	&:hover
+		&:before
+			opacity 1
+		&:after
+			opacity 1
+			margin-top 0
+			
+
+.read-more-link
+	text-transform uppercase
+	font 12px $Bold
+	color $secondary-color
+	&:hover
+		color $accent-color
+		
