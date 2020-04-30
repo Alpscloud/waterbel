@@ -1,2 +1,43 @@
 .footer
 	background-color $footer-bg
+	&-top
+		padding-top 100px
+		
+	&-bottom
+		padding 55px 0
+		
+	&__col
+		width 25%
+		padding 0 65px
+		&--title
+			text-transform uppercase
+			color $light-color
+			font 12px $Bold
+			margin-bottom 55px
+		
+	&__contacts
+		padding 55px 0
+		margin 55px 0
+		border-top 1px solid $footer-border-color
+		border-bottom 1px solid $footer-border-color
+		color rgba($light-color, .6)
+		p
+			margin-bottom 30px
+			&:last-child
+				margin-bottom 0
+		
+	&__row
+		padding-bottom 55px
+		border-bottom 1px solid $footer-border-color
+		margin-left -65px
+		margin-right -65px
+		
+	.socials__link
+		svg
+			fill $light-color
+			
+	
+		
+.copyright
+	color rgba($light-color, .3)
+	

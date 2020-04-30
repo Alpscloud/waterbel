@@ -382,7 +382,7 @@
 .sect__seo
 	background url('../img/backgrounds/water-top.png') top center no-repeat / auto 556px
 	padding-top 420px
-	padding-bottom 200px
+	padding-bottom 150px
 	
 	.sect__title
 		margin-bottom 60px
@@ -391,3 +391,40 @@
 	padding-right 130px
 	p
 		margin-bottom 30px
+		
+// Contacts
+.sect__contacts
+	background-color $sect-contacts-bg
+	padding 100px 0
+	
+	.sect__title
+		margin-bottom 60px
+		
+.contacts
+	&__col
+		width 41.6666%
+		
+.contact
+	&__item
+		margin-bottom 70px
+		
+		.form
+			max-width 230px
+		&:last-child
+			margin-bottom 0
+		&--title
+			font 12px $Bold
+			text-transform uppercase
+			margin-bottom 30px
+			
+	&__phones
+		display flex
+		align-items center
+		justify-content flex-start
+		div
+			margin-right 30px
+			&:last-child
+				margin-right 0
+		
+.map__col
+	width 58.3333%

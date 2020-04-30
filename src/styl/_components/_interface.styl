@@ -1,6 +1,7 @@
 .with-ic
 	position relative
 	padding-left 25px
+	
 	&:before
 		pseudo()
 		position absolute
@@ -22,6 +23,38 @@
 	&-mail
 		&:before
 			background-image url('../img/icons/svg/header_top_mail.svg')
+
+			
+.mail-link
+	display inline-block
+	color $dark-secondary-color
+	line-height 1
+	font-size 18px
+	position relative
+	padding-left 35px
+	&__ic
+		display block
+		width 24px
+		height 18px
+		position absolute
+		vertical-center()
+		left 0
+		svg
+			svg()
+			fill $accent-color
+	&:hover
+		color $accent-color
+	
+	&-light
+		color rgba($light-color, .6)
+		svg
+			fill $light-color
+		&:hover
+			color $light-color
+		
+
+		
+
 			
 .tooltip
 	position absolute
@@ -90,36 +123,61 @@
 	display flex
 	flex-direction column
 	
+	
 	&:before
 		pseudo()
 		position absolute
 		vertical-center()
 		left 0
 		background-repeat no-repeat
-		background-position 50% 50%
-		width 18px
+		background-position left 50%
+		width 32px
 		height 32px
+		
+	&-ic-top
+		&:before
+			transform none
+			top 0
 		
 	&-mob
 		&:before
 			background-image url('../img/icons/svg/header_cellphone.svg')
 			background-size 18px 32px
+		&.phones-light
+			&:before
+					background-image url('../img/icons/svg/header_cellphone_light.svg')
 			
 	&-home
 		&:before
 			background-image url('../img/icons/svg/header_phone.svg')
-			background-size 18px 18px
+			background-size 22px 22px
+		&.phones-light
+			&:before
+					background-image url('../img/icons/svg/header_phone_light.svg')
+
 			
 	&__link
 		display inline-block
 		line-height 1
 		color $darken-secondary-color
-		margin-bottom 3px
+		margin-bottom 5px
 		font 22px $Med
 		&:last-child
 			margin-bottom 0
 		&:hover
 			color $accent-color
+			
+		&--sm
+			font-size 18px
+			margin-bottom 10px
+			&:last-child
+				margin-bottom 0
+	
+	&-light
+		.phones__link
+			color rgba($light-color, .6)
+			&:hover
+				color $light-color
 			
 .fancy-link
 	position relative
