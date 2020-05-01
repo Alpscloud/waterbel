@@ -1,5 +1,6 @@
 .nav
 	background-color $accent-color
+
 	&__list
 		display flex
 		justify-content space-between
@@ -7,6 +8,7 @@
 	&__item
 		flex 1 0 auto
 		&.has-sublist
+
 			.nav__link
 				span
 					padding-right 20px
@@ -32,7 +34,7 @@
 					opacity 1
 					visibility visible
 					pointer-events auto
-					margin-top 0
+					transform translateY(0)
 					
 	&__link
 		display block
@@ -61,12 +63,45 @@
 					width 20px
 					height 14px
 			
-
+	&__logo
+		display none
+		padding-bottom 10px
+		margin-bottom 10px
+		border-bottom 1px solid $border-color
+		.logo__img
+			max-width 150px !important
+			
+	&__overflow
+		position absolute
+		fullSize()
+		background-color rgba($dark-color, .8)
+		z-index 20
+		position absolute
+		backface-visibility hidden
+		-webkit-backface-visibility hidden
+		-webkit-overflow-scrolling touch
+		
+		transition all .17s ease-in-out
+		
+		opacity 0
+		visibility hidden
+		pointer-events none
+		
+	&__container
+		position relative
+		z-index 21
+		
+		.btn__close
+			display none
+			
+	.btn__callback--wrapper
+		display none
+		
 .sublist
 	position absolute
 	top 100%
-	margin-top -1px
 	left 0
+	width 100%
 	width 100%
 	z-index 5
 	background-color $light-color
@@ -74,9 +109,9 @@
 	transition all .17s ease-in-out
 	opacity 0
 	visibility hidden
-	margin-top -20px
+	transform translateY(-20px)
 	pointer-events none
-	
+
 	display flex
 	flex-wrap wrap
 	justify-content flex-start

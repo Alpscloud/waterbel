@@ -38,6 +38,12 @@ $(document).ready(function() {
 	// Popup
 	$('.js-open-popup-form-btn').on('click',function(e) {
 		e.preventDefault();
+
+		if ($('.js-open-mobile-menu-btn').hasClass('is-active')) {
+			$('.js-open-mobile-menu-btn').removeClass('is-active');
+			$('.js-nav').removeClass('is-opened');
+		}
+
 		$('.js-popup').fadeIn(300);
 		$('html').addClass('is-fixed');
 	});
@@ -61,6 +67,95 @@ $(document).ready(function() {
 
 	});
 	// ========= =========== =========== ===========
+
+	// Mobile menu
+	$('.js-open-mobile-menu-btn').on('click', function(e) {
+		e.preventDefault();
+
+		if($('.js-toggle-mobile-search-btn').hasClass('is-active')) {
+			$('.js-toggle-mobile-search-btn').removeClass('is-active');
+			$('.js-search').stop().slideUp(100);
+		}
+
+		if($('.js-toggle-phones-block-btn').hasClass('is-active')) {
+			$('.js-toggle-phones-block-btn').removeClass('is-active');
+			$('.header .phones-home').removeClass('is-opened');
+		}
+
+		if($('.js-toggle-mobile-phones-btn').hasClass('is-active')) {
+			$('.js-toggle-mobile-phones-btn').removeClass('is-active');
+			$('.js-header-phones').stop().slideUp(100);
+			
+		}
+
+
+		$(this).addClass('is-active');
+		$('html').addClass('is-fixed');
+		$('.js-nav').addClass('is-opened');
+	});
+
+	$('.js-close-mobile-menu-btn').on('click', function(e) {
+		e.preventDefault();
+
+		$('html').removeClass('is-fixed');
+		$('.js-nav').removeClass('is-opened');
+		$('.js-open-mobile-menu-btn').removeClass('is-active');
+	});
+
+	// Mobile search
+	$('.js-toggle-mobile-search-btn').on('click', function(e) {
+		e.preventDefault();
+
+		if($('.js-toggle-phones-block-btn').hasClass('is-active')) {
+			$('.js-toggle-phones-block-btn').removeClass('is-active');
+			$('.header .phones-home').removeClass('is-opened');
+		}
+
+		if($('.js-toggle-mobile-phones-btn').hasClass('is-active')) {
+			$('.js-toggle-mobile-phones-btn').removeClass('is-active');
+			$('.js-header-phones').stop().slideUp(100);
+			
+		}
+
+		$(this).toggleClass('is-active');
+		$('.js-search').stop().slideToggle(100);
+	});
+
+	// Tablet phones
+	$('.js-toggle-phones-block-btn').on('click', function(e) {
+		e.preventDefault();
+
+		if($('.js-toggle-mobile-search-btn').hasClass('is-active')) {
+			$('.js-toggle-mobile-search-btn').removeClass('is-active');
+			$('.js-search').stop().slideUp(100);
+		}
+
+		$(this).toggleClass('is-active');
+		$('.header .phones-home').toggleClass('is-opened');
+	});
+
+	// Mobile phones
+	$('.js-toggle-mobile-phones-btn').on('click', function(e) {
+		e.preventDefault();
+
+		if($('.js-toggle-mobile-search-btn').hasClass('is-active')) {
+			$('.js-toggle-mobile-search-btn').removeClass('is-active');
+			$('.js-search').stop().slideUp(100);
+		}
+
+		$(this).toggleClass('is-active');
+		$('.js-header-phones').stop().slideToggle(100);
+	});
+
+	// Toggled menu sublist
+	$('.js-toggled-sublist-btn').on('click', function(e) {
+		e.preventDefault();
+		var li = $(this).parent('li.has-sublist');
+		li.toggleClass('is-toggled');
+		li.find('.sublist').stop().slideToggle(200);
+	});
+
+	
 
 	var promoSlider = new Swiper('.js-promo-slider', {
 		speed: 700,
@@ -199,5 +294,8 @@ $(document).ready(function() {
 });
 
 $(window).on('load', function() {
-	$('body').addClass('is-loaded');
+	setTimeout(function() {
+		$('body').addClass('is-loaded');
+	}, 500);
+	
 });

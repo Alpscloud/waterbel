@@ -7,6 +7,7 @@
 		{% include '../parts/components/preloader.html' %}
 		{% include '../parts/components/popup.html' %}
 		{% include '../parts/components/go-to-top-button.html' %}
+		
 
 		<!-- Header -->
 		{% include '../parts/sections/header.html' %}
@@ -149,28 +150,30 @@
 				<div class="container">
 					<div class="form__block">
 						<div class="form__content">
-							<h3 class="sect__title light-color">Подберем подходящую<br>систему очистки воды</h3>
-							<p class="form__text light-color">Не знаете, какую систему выбрать? Оставьте заявку на нашем сайте, и мы ответим на все Ваши вопросы, а также подберем для Вас подходящую систему очистки воды.</p>
+							<div class="form__content--block">
+								<h3 class="sect__title light-color">Подберем подходящую<br>систему очистки воды</h3>
+								<p class="form__text light-color">Не знаете, какую систему выбрать? Оставьте заявку на нашем сайте, и мы ответим на все Ваши вопросы, а также подберем для Вас подходящую систему очистки воды.</p>
 
-							<form>
-								<div class="row align-horisontal-start row-gutters">
-									<div class="input__col">
-										<div class="input__wrapper">
-											<input type="text" class="input input-light js-input" name="name" placeholder="Ваше имя">
+								<form>
+									<div class="row align-horisontal-start row-gutters">
+										<div class="input__col">
+											<div class="input__wrapper">
+												<input type="text" class="input input-light js-input" name="name" placeholder="Ваше имя">
+											</div>
+										</div>
+										<div class="input__col">
+											<div class="input__wrapper">
+												<input type="tel" class="input input-light js-input" name="phone" placeholder="Ваш телефон">
+											</div>
+										</div>
+										<div class="input__col">
+											<button class="btn btn-light" type="submit">оставить заявку</button>
 										</div>
 									</div>
-									<div class="input__col">
-										<div class="input__wrapper">
-											<input type="tel" class="input input-light js-input" name="phone" placeholder="Ваш телефон">
-										</div>
-									</div>
-									<div class="input__col">
-										<button class="btn btn-light" type="submit">оставить заявку</button>
-									</div>
-								</div>
 
-								<p class="text-center light-color form__notice">* - мы не передаем Ваши данные третьим лицам согласно нашей <a href="#">политике конфиденциальности</a></p>
-							</form>
+									<p class="text-center light-color form__notice">* - мы не передаем Ваши данные третьим лицам согласно нашей <a href="#">политике конфиденциальности</a></p>
+								</form>
+							</div>
 
 							<img src="img/filter-img.png" alt="">
 						</div>
@@ -470,7 +473,7 @@
 			<!-- //Section gallery -->
 
 			<!-- Section feedbacks -->
-			<section class="sect__feedbacks bg color-bg" style="background-image: url('img/backgrounds/feedbacks-bg.jpg');">
+			<section class="sect__feedbacks bg" style="background-image: url('img/backgrounds/feedbacks-bg.jpg');">
 				<h2 class="w3c">&nbsp;</h2>
 
 				<div class="container">

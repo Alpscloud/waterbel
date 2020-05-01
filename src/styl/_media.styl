@@ -13,7 +13,938 @@
 	.container
 		padding-left 25px
 		padding-right 25px
+		
+	// Header
+	.header
+		&__contacts
+			margin-right 30px
+		&__contact
+			font-size 16px
+			margin-right 30px
+			
+		&__phones
+			margin 0 30px
+			padding 0 30px
+			
+			.phones__link
+				font-size 18px
+			
+		.logo__img
+			max-width 220px
+			
+	.nav__link
+		padding-top 20px
+		padding-bottom 20px
+			
+	// Promo
+	.promo-slide
+		&__title
+			font-size 40px
+		&__text
+			margin-top 30px
+		&__price
+			font-size 32px
+			
+		.btn__with-logo
+			margin-top 30px
+			
++max-screen(1300px)
+	// Header
+	.header
+		&__phones
+			.phones__link
+				font-size 16px
+				
+	.sublist
+		padding 10px
+				
+	// sect form
+	.form__block
+		padding-left 30px
+		
+	// Services
+	.service
+		&__wrapper
+			width 33.3333%
+			
+	.block-with-ic__ic
+		margin-right 15px
+			
+	// Advantages
+	.advantages
+		&__items
+			padding 0
+			width 100%
+			display flex
+			justify-content flex-start
+			flex-wrap wrap
+			margin-left -15px
+			margin-right -15px
+			
+		
+				
+		&__cards
+			padding 0
+			width 100%
+			
+	.advantage
+		width 33.3333%
+		padding 15px
+		margin-bottom 0
+			
+		&-card
+			background-size cover
+			padding 60px
+			
 
+			
++max-screen(1200px)
+	// Header
+	.header
+		&__contacts
+			margin-right 20px
+		&__contact
+			font-size 14px
+			margin-right 20px
+		
+		&__phones
+			margin 0 20px
+			padding 0 20px
+			div
+				margin-right 20px
+		.logo__img
+			max-width 200px
+			
+	.nav__link
+		padding-left 5%
+		padding-right 5%
+	// Promo
+	.promo-slide
+		&__bg
+			padding-top 50%
+			
+	// Categories
+	.category__wrapper 
+		width 33.3333%
+			
++max-screen(1100px)
+	.gutter
+		&-top
+			padding-top 90px
+		&-bottom
+			padding-bottom 80px
+	.gutters
+		padding 90px 0
+		
+	.sect__title
+		font-size 32px
+		margin-bottom 60px !important
+		&--with-logo
+			&:before
+				width 80px
+				height 60px
+				
+	// Header
+	.header
+		position relative
+		&__contacts
+			flex 1
+			&--col
+				margin-right 0
+				
+
+		&__phones
+			flex 1 0 auto
+			
+			.phones-home
+				margin-right 0
+			.btn__callback--wrapper
+				display none
+				
+		&-center
+			&__row
+				justify-content flex-start
+				
+		&__tools
+			display flex
+			align-items center
+			justify-content flex-end
+			flex 1
+			margin-right -6px
+				
+	.btn
+		&__search--mobile,
+		&__hamburger
+			display inline-block
+		
+	.search__wrapper
+		position absolute
+		top 100%
+		left 0
+		z-index 10
+		width 100%
+		padding 15px
+		background-color $light-color
+		margin-top -1px
+		display none
+	// Nav
+	.nav
+		position fixed
+		right 0
+		top 0
+		bottom 0
+		z-index 20
+		width 100%
+		background-color transparent
+		display flex
+		justify-content flex-end
+		opacity 0
+		visibility hidden
+		pointer-events none
+		transition all .17s ease-in-out
+		&.is-opened
+			opacity 1
+			visibility visible
+			pointer-events auto
+			.nav
+				&__overflow
+					opacity 1
+					visibility visible
+					pointer-events auto
+					
+				&__container
+					transform translate3d(0,0,0)
+					
+		.btn__callback--wrapper
+			display block
+		
+
+		
+		&__container
+			width 500px
+			background-color $light-color
+			max-width none
+			margin 0
+			padding 30px 15px !important
+			overflow-y auto
+			transition all .17s ease-in-out
+			transition-delay .3s
+			transform translate3d(110%, 0, 0)
+			.btn__close
+				display inline-block
+		&__logo
+			display block	
+		&__list
+			display block
+			padding-bottom 20px
+			margin-bottom 20px
+			border-bottom 1px solid $border-color
+			
+		&__item
+			display block
+			padding 10px  0
+			
+			&.has-sublist
+				position relative
+				.btn__menu-arrow
+					display inline-block
+				&.is-toggled
+					.btn__menu-arrow
+						transform rotate(-180deg)
+				&:hover
+					.nav__link
+						background-color transparent
+						color $accent-color
+					
+				
+						
+				.nav__link		
+					span
+						padding-right 0
+						&:after
+							display none
+							
+			
+			
+		&__link
+			color $accent-color
+			padding 0
+			text-align left
+			display inline-block
+			&:hover
+				background-color transparent
+				color $secondary-color
+			
+			&--catalog
+				span
+					padding-left 0
+					&:before
+						display none
+						
+	.sublist
+		position relative
+		width auto
+		left auto
+		top auto
+		opacity 1
+		pointer-events auto
+		transform translateY(0)
+		visibility visible
+		padding 20px 0 0 0
+		margin-top 0
+		box-shadow none
+		background-color transparent
+		display none
+		overflow hidden
+		transition none
+		&__col
+			width 100%
+			padding 0 10px 20px 10px
+			&:last-child
+				padding-bottom 0
+				
+			&--block
+				&_title
+					margin-bottom 15px
+					font-size 16px
+					
+			&.width-20
+				width 100%
+				
+	.category__link--menu
+		padding 7.5px
+		display flex
+		align-items center
+		justify-content flex-start
+		text-align left
+		
+		.category
+			&__ic
+				width 50px
+				height 50px
+				background-size 50px 50px
+				margin 0 15px 0 0
+			&__title
+				font-size 14px
+				line-height 1.25
+				
+	// Promo
+	.promo-slide
+		&__title
+			font-size 32px
+		&__text
+			margin-top 15px
+			font-size 20px
+		&__price
+			margin-top 15px
+			font-size 26px
+	
+	// Sect form
+	.sect__form
+		padding-top 90px
+		padding-bottom 250px
+	.form
+		&__block
+			padding 70px 30px
+		&__content
+			max-width 100%
+			display flex
+			flex-wrap wrap
+			&--block
+				width 100%
+				margin-bottom 40px
+				
+			img
+				position relative
+				transform none
+				left auto
+				margin-left 0
+				top auto
+				margin 0 auto -200px auto
+				max-width 280px
+				
+
+	// Services
+	.service
+		&__wrapper
+			width 50%
+			
+			.block-with-ic__ic
+				margin-right 15px
+				
+	.advantage
+		width 50%
+		
+	// Seo
+	.sect__seo
+		padding-bottom 90px
+		
+	// Contacts
+	.sect__contacts
+		padding-bottom 0
+	.contacts
+		&__row
+			flex-wrap wrap
+			
+		&__col
+			width 100%
+			margin-bottom 40px
+			
+		&__blocks
+			display flex
+			justify-content space-between
+			margin-left -15px
+			margin-right -15px
+	
+	
+	.contact
+		&__phones
+			flex-wrap wrap
+			.phones
+				width 100%
+				margin-right 0 !important
+				margin-bottom 20px
+				&:last-child
+					margin-bottom 0
+		&__item
+			width 33.3333%
+			padding 0 15px
+			.form
+				max-width 100%		
+		
+	.map
+		&__wrapper
+			height 450px
+			margin-top 0
+		&__col
+			width 100%
+			
+
+	// Footer
+	.footer
+		&-top
+			padding-top 65px
+			.footer
+				&__col
+					width 33.3333%
+					&:first-child
+						width 100%
+						margin-bottom 30px
+		&__contacts
+			padding 25px 0
+			margin 25px 0
+		&__row
+			margin-left -15px
+			margin-right -15px	
+		&__col
+			padding 0 15px
+			
+		&-bottom
+			.footer
+				&__row
+					justify-content space-between
+
+				&__col
+					width auto
+					padding 0
+					
+			.phones__link
+				font-size 14px
+					
+
+		
+		
+				
++max-screen(1000px)
+	body
+		font-size 14px
+	// Header
+	.header
+		&__phones
+			position relative
+			justify-content center
+			.phones
+				&-mob
+					margin-right 0
+				&-home
+					position absolute
+					top 100%
+					horisontal-center()
+					z-index 3
+					background-color $light-color
+					padding 5px 5px 5px 40px
+					border-radius 5px
+					min-width 200px
+					box-shadow 0px 5px 40px 0px rgba(0, 0, 0, 0.15)
+					transition all .17s ease-in-out
+					margin-top 20px
+					opacity 0
+					visibility hidden
+					&.is-opened
+						margin-top 0
+						opacity 1
+						visibility visible
+						
+					&:before
+						background-position 50% 50%
+		
+		.logo__img
+			max-width 145px			
+	.btn__toggle-phones
+		display inline-block
+		
+	// Promo
+	.promo-slide
+		&__bg
+			padding-top 60%
+			
+	// Gallery
+	.gallery
+		&-item__wrapper
+			padding 5px
+		&__row
+			margin-left -5px
+			margin-right -5px
+			
+	// Blog
+	.article-card__wrapper
+		width 50%
+		
+	// Seo
+	.seo-content
+		padding-right 0
+			
++max-screen(800px)
+	// Header
+	.header
+		&__contact
+			font-size 12px
+			
+	// Promo
+	.promo-slide
+		&__bg
+			padding-top 70%
+		&__content
+			&--block
+				max-width 85%
+			
++max-screen(767px)
+	.container
+		padding-left 15px
+		padding-right 15px
+	
+	// Header
+	.header
+		&-center
+			padding 10px 0
+		&-cart
+			font-size 14px
+			&__wrapper
+				min-width 130px
+	
+
+	// Categories
+	.categories__row
+		margin-left -7.5px
+		margin-right -7.5px
+	.category
+		&__wrapper 
+			width 50%
+			padding 7.5px
+			
+			.category
+				padding 35px 15px
+				&__ic
+					width 90px
+					height 90px
+					background-size 90px 90px
+					margin-bottom 30px
+				&__title
+					font-size 20px
+					
+				.btn
+					margin-top 30px
+					
+	// About
+	.sect__about
+		min-height auto
+		padding-top 0
+		padding-bottom 90px
+		background rgb(255,255,255)
+		background -moz-linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(177,223,246,1) 100%)
+		background -webkit-linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(177,223,246,1) 100%)
+		background linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(177,223,246,1) 100%)
+		
+	// Feedbacks
+	.sect__feedbacks
+		background-size 0 0
+		
+	.feedback-slide
+		&__text
+			font-size 16px
+			padding-top 45px
+			
+	// Clients
+	.clients__row
+		margin-left -7.5px
+		margin-right -7.5px
+	.client
+		&__wrapper
+			width 33.3333%
+			padding 7.5px
+		
+				
++max-screen(700px)
+	.btn__top
+		width 30px
+		height 30px
+		bottom 10px
+		right 10px
+		
+	.popup__body
+		padding 25px
+	// Header
+	.header
+		&__tools
+			margin-right -4px
+		&__contacts
+			flex-wrap wrap
+		&__contact
+			width 100%
+			margin-top 10px
+			&.ic-mail
+				display none
+			&:first-child
+				margin-top 0
+				
+		.socials__item
+			margin-right 10px
+			&:last-child
+				margin-right 0
+		
+		&__phones
+			position absolute
+			top 100%
+			left 0
+			margin-top -1px
+			margin-left 0
+			margin-right 0
+			background-color $light-color
+			padding 15px
+			z-index 5
+			width 100%
+			display none
+			
+			.phones-home
+				position relative
+				transform none
+				margin-top 0
+				margin-left 30px
+				opacity 1
+				visibility visible
+				pointer-events auto
+				left auto
+				top auto
+				background-color transparent
+				border-radius 0
+				padding 0 0 0 35px
+				box-shadow none
+			
+
+	.nav
+		&__container
+			width 85%
+			
+		.btn__callback
+			width 100%
+			
+	.btn
+		padding 15px
+		&__search--mobile,
+		&__hamburger
+			width 30px
+			height 30px
+			margin-left 10px
+		&__toggle-phones
+			display none
+		&__phone
+			display inline-block
+			
+		&__with-logo
+			padding 15px 70px 15px 15px
+			&_logo
+				width 45px
+				height 45px
+	
+	// Promo
+	.promo-slide
+		&__bg
+			padding-top 100%
+			
+	.promo__slider--pagination
+		horisontal-center()
+		bottom 15px
+		right auto
+		top auto
+		display block
+		text-align center
+		.swiper-pagination-bullet
+			display inline-block
+			margin-bottom 0
+			margin-right 10px
+			&:last-child
+				margin-right 0
+				
+	// Sect form
+	.sect__form
+		
+		.container
+			padding-left 0
+			padding-right 0
+	.form
+		&__block
+			padding 30px 15px
+			border-radius 0
+			
+		&__content
+			img
+				max-width 200px
+	.input
+		&__col
+			width 100%
+			
+	.service
+		&__wrapper
+			width 100%
+			
+	// ADvantages
+	.advantage
+		width 100%
+		&-card
+			padding 20px
+			background-size contain
+			&__num
+				font-size 30px
+				margin-bottom 10px
+			&__wrapper
+				padding 5px
+				
+	.advantages__cards
+		margin-left -5px
+		margin-right -5px
+	
+	// Contacts
+	.contacts__blocks
+		flex-wrap wrap
+	.contact__item
+		width 100%	
+		
+	.map__wrapper
+		height 350px
+		
+	// Footer
+	.footer
+		&-top
+			padding-top 30px
+			.footer__col
+				width 100%
+				margin-bottom 30px
+				&:last-child
+					margin-bottom 0
+					
+	
+					
+		&__col
+			text-align center
+			&--title
+				margin-bottom 15px
+				
+		&__nav
+			ul
+				li
+					margin-bottom 10px
+					&:last-child
+						margin-bottom 0
+				a
+					font-size 14px
+					
+		&-bottom
+			padding 30px 0
+			.footer
+				&__row
+					padding-bottom 30px
+				&__col
+					width 100%
+					margin-bottom 30px
+					display flex
+					justify-content center
+					&:last-child
+						margin-bottom 0
+					
+		
+		
++max-screen(500px)
+	// Header
+	.header
+		&-cart
+			width 30px
+			height 30px
+			padding-left 0
+			&__ic
+				position-center()
+			&__count
+				top -9px
+				left 15px
+			.price
+				display none
+			&__wrapper
+				min-width auto
+				height 30px
+				
+		.logo__img
+			max-width 120px
+				
+	.btn__phone
+		margin-left 15px
+	
+
+	// .category__link--menu
+	// 	text-align center
+	// 	.category
+	// 		&__ic
+	// 			width 40px
+	// 			height 40px
+	// 			background-size 40px 40px
+	// 			margin-bottom 10px
+	// 		&__title
+	// 			font-size 12px
+	// 			line-height 1.4
+	// 			display block
+	// 			a
+	// 				line-height 1
+	// Gallery
+	.gallery
+		&__col
+			width 100%
+			display flex
+			&:nth-child(2)
+				.gallery-item
+					height auto
+					padding-top 100%
+					&__wrapper
+						width 100%
+		&-item
+			padding-top 100%
+			&__wrapper
+				width 50%
+				
+	// Clients
+	.client
+		padding 12px
+		&__wrapper
+			width 50%
+			
++max-screen(450px)
+	.sect__title
+		font-size 24px
+		margin-bottom 40px !important
+	// Header
+	.header
+		&__phones
+			flex-wrap wrap
+			
+			.phones
+				width 100%
+				margin-top 10px
+				&:first-child
+					margin-top 0 
+					
+				&-home
+					margin-left 0
+					&:before
+						background-position left 0
+					
+		
+	// Promo
+	.promo-slide
+		&__bg
+			padding-top 110%
+		&__title
+			font-size 20px
+		&__text
+			font-size 14px
+		&__price
+			font-size 20px
+			
+		.btn__with-logo
+			margin-top 15px
+			
+	// Categoreis
+	.category
+		&__wrapper
+			width 100%
+	
+	// Services 
+	.block-with-ic
+		&__title
+			font-size 18px !important
+			margin-bottom 10px !important
+			
+
+	// About
+	.about-us
+		&__preview
+			margin-bottom 30px
+			font-size 16px
+			img
+				margin-bottom 30px
+			p
+				line-height 1.5
+			
+			h3
+				font-size 24px
+				margin-bottom 30px
+				
+			h4
+				font-size 20px
+				margin-bottom 25px
+				
+			h5
+				font-size 18px
+				margin-bottom 20px
+				
+			h6
+				font-size 16px
+				margin-bottom 15px
+				
+	// Articles
+	.articles__row
+		margin-left -7.5px
+		margin-right -7.5px
+	.article-card
+		&__wrapper
+			padding 0 7.5px 30px 7.5px
+		&__thumbnail--wrapper
+			margin-bottom 15px
+		&__date
+			top 10px
+			padding 5px
+			font-size 10px
+			width 70px
+			white-space nowrap
+		&__title
+			font-size 14px
+			margin-bottom 10px
+			
+		&__content
+			p
+				margin-bottom 15px
+				
+	// Seo
+	.sect__seo
+		background-size auto 300px
+		padding-top 280px
+		
 +min-screen(2200px)
 	// Promo
 	.promo-slide__bg
