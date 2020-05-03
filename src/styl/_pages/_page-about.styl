@@ -1,0 +1,45 @@
+.about-us
+	.content
+		max-width 1200px
+		margin 0 auto
+	&__quote
+		display block
+		max-width 1040px
+		margin 90px auto 0 auto
+		font 36px $Italic
+		line-height 1.6
+		color $secondary-color
+		padding-top 45px
+		text-align center
+		position relative
+		&:before
+			pseudo()
+			top 0
+			left 0
+			width 52px
+			height 40px
+			position absolute
+			background url('../img/icons/svg/quote.svg') 50% 50% no-repeat / contain
+			
+	&__advantages
+		.advantage
+			padding 15px
+			width 20%
+			margin-bottom 0
+			
+		.block-with-ic
+			flex-direction column
+			align-items center
+			text-align center
+			&__ic
+				margin-right 0
+				margin-bottom 35px
+				
+.office
+	font 18px $Med
+	color $dark-secondary-color
+	margin-top 60px
+	img
+		display block
+		margin 0 auto 20px auto
+		border-radius 10px

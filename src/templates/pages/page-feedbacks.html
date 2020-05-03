@@ -4,12 +4,138 @@
 	<!-- CONTENT WRAPPER -->
 	<div class="content__wrapper">
 
+		{% include '../parts/components/popup.html' %}
+		{% include '../parts/components/go-to-top-button.html' %}
+		
+
 		<!-- Header -->
 		{% include '../parts/sections/header.html' %}
 		<!-- //Header -->
 
 		<!-- Main -->
 		<main class="main">
+
+			<section class="page gutter-bottom">
+				<h2 class="w3c">&nbsp;</h2>
+
+				<!-- Breadcrumbs -->
+				<div class="breadcrumbs">
+					<div class="container">
+						<ul class="breadcrumbs__list">
+							<li class="breadcrumbs__item"><a href="index.html" class="breadcrumbs__link">Главная</a></li>
+							<li class="breadcrumbs__item"><span class="breadcrumbs__link is-active">Отзывы</span></li>
+						</ul>
+					</div>
+					<!-- //container -->
+				</div>
+				<!-- //Breadcrumbs -->
+				
+
+				<!-- Page content -->
+				<section class="page-content container">
+					<h2 class="sect__title">Отзывы наших клиентов</h2>
+
+					<!-- Feedbacks -->
+					<div class="feedbacks ">
+
+						<!-- Item -->
+						<div class="feedback">
+							<div class="feedback__content">
+								<h3 class="feedback__name">Владимир Иванович</h3>
+								<p class="feedback__date">11.11.2014 в 23:26</p>
+								<blockquote class="feedback__text">Фильтры стоят очень дорого, у них механический фильтр стоит 100р., а в Термомире 40р. есть разница, замена 2-х фильтров стоит 800-900р. в других фирмах замена 3-х фильтров стоит 600-700р.</blockquote>
+							</div>
+
+							<!-- Answer -->
+							<div class="feedback__answer">
+								<div class="feedback__answer--content">
+									<h3 class="feedback__name">Ответ компании:</h3>
+									<blockquote class="feedback__text">Ну наконец-то появился отрицательный отзыв! Спасибо, Андрей, а то некоторые думают, что мы их удаляем. Ваша критика вполне обоснована. Наши картриджи действительно несколько дороже, чем у других. Мы, конечно, можем закупать их за копейки и продавать по 40 рублей, ведь их производством кто только не занимается. Только вот политика нашей компании несколько иная: мы продаём только качественный продукт. Это касается и картриджей, и фильтров, и больших систем. В этом убедились более 4000 наших клиентов. Опять же, любой наш клиент может купить расходники самостоятельно и воспользоваться услугами других компаний по их замене. Но когда из-за некачественного картриджа или чьей-то непрофессиональной работы нам приходится менять дорогостоящие узлы или систему целиком, бывает очень грустно. И в заключении своего длинного ответа хочу сказать, что наш любимый город не настолько велик, чтобы прощать недобросовестно ведомый бизнес. Большая часть клиентов пришла к нам именно по рекомендации друзей, соседей, коллег, которые и создают такую важную составляющую нашей работы, как РЕПУТАЦИЯ! Мы ей очень дорожим. И, как Вы уже догадались, больше всего мы дорожим мнением наших клиентов!</blockquote>
+								</div>
+							</div>
+							<!-- //Answer -->
+						</div>
+						<!-- //Item -->
+
+						<!-- Item -->
+						<div class="feedback">
+							<div class="feedback__content">
+								<h3 class="feedback__name">Владимир Иванович</h3>
+								<p class="feedback__date">11.11.2014 в 23:26</p>
+								<blockquote class="feedback__text">Спасибо большое за фильтры. В начале года поставил всей семье. Долго сомневался в правильности выбора фильтра. Согласитесь, сейчас на рынке огромное колличество производителей. Нам пока всем все нравится.</blockquote>
+							</div>
+						</div>
+						<!-- //Item -->
+
+						<!-- Item -->
+						<div class="feedback">
+							<div class="feedback__content">
+								<h3 class="feedback__name">Сергиенко Олег Николаевич</h3>
+								<p class="feedback__date">11.11.2014 в 23:26</p>
+								<blockquote class="feedback__text">Хочется поблагодарить вашу фирму. Очень долго выбирали даже не между фильтрами, а между фирмами. Так как последующие вопросы, которые могут возникать при эксплуатации, не все оказывается могут решить. Не хотелось бы на вашем сайте указывать недобросовестных продавцов, вы их и сами знаете. У вашей организации отличная репутация. Все таки веришь больше не рекламе, а пресловутому сарафанному радио. Надеюсь, не пожалеем, что выбрали вас! Пока за 3 месяца работы фильтра вопросов нет! Качество воды отличное. сервис на уровне! Благодарю.</blockquote>
+							</div>
+						</div>
+						<!-- //Item -->
+
+					</div>
+					<!-- //Feedbacks -->
+
+					{% include '../parts/components/pagination.html' %}
+				</section>
+				<!-- //Page content -->
+
+				<!-- Section form -->
+				<section class="gutters sect__feedback-form">
+					<h2 class="sect__title container text-center">Оставьте Ваш отзыв</h2>
+
+					<div class="container">
+						<form  class="feedback-form text-center">
+							<div class="feedback-form__row row row-gutters">
+								<div class="feedback-form__input--wrapper">
+									<label for="feedbackName" class="feedback-form__label">Ваше имя*</label>
+									<input type="text" name="name" id="feedbackName" class="feedback-form__input">
+								</div>
+								<div class="feedback-form__input--wrapper">
+									<label for="feedbackEmail" class="feedback-form__label">Ваш email*</label>
+									<input type="email" name="email" id="feedbackEmail" class="feedback-form__input">
+								</div>
+							</div>
+
+							<div class="feedback-form__input--wrapper">
+								<label for="feedbackMessage" class="feedback-form__label">Ваш отзыв*</label>
+								<textarea name="message" id="feedbackMessage" class="feedback-form__input textarea"></textarea>
+							</div>
+
+							<button class="btn btn-accent" type="submit">Отправить</button>
+
+							<p class="text-center form__notice">* - мы не передаем Ваши данные третьим лицам согласно нашей <a href="page-content.html">политике конфиденциальности</a></p>
+						</form>
+					</div>
+					<!-- //container -->
+				</section>
+				<!-- //Section form -->
+
+
+
+				<!-- Section seo -->
+				<section class="sect__seo">
+					<h2 class="w3c">&nbsp;</h2>
+
+					<div class="container">
+						<h3 class="sect__title">Заголовок SEO текста</h3>
+
+						<div class="content seo-content">
+
+							<p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Необходимыми которое буквенных, повстречался он путь снова свой заманивший рукопись взобравшись грамматики ему дорогу. Предупредила безорфографичный там обеспечивает осталось они, сих заглавных языком, безопасную имени это власти, залетают большой деревни оксмокс одна ты он назад буквоград знаках речью. От всех, щеке своего подпоясал языком курсивных его пояс страну языкового рыбного имеет ее коварный правилами переписали гор это, они встретил взобравшись, залетают назад собрал жаренные. Деревни вопроса гор рукописи страна скатился журчит но, которой снова рекламных вопрос не своего. Снова, имеет назад пустился свое но рыбного образ осталось, безопасную не решила она.</p>
+							<p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Имени они подзаголовок осталось ты выйти это, обеспечивает собрал последний свой если большой букв, рукописи семантика щеке правилами океана возвращайся путь заглавных свое лучше! Речью реторический на берегу несколько буквенных рекламных, она снова сбить великий вдали, сих за, инициал которой своего!</p>
+						</div>
+					</div>
+					<!-- //container -->
+				</section>
+				<!-- //Section seo -->
+
+			</section>
+
 		</main>
 		<!-- //Main -->
 

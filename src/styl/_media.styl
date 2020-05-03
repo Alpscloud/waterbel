@@ -52,6 +52,10 @@
 		.btn__with-logo
 			margin-top 30px
 			
+	// About
+	.page__header
+		min-height 560px
+			
 +max-screen(1300px)
 	// Header
 	.header
@@ -99,9 +103,7 @@
 		&-card
 			background-size cover
 			padding 60px
-			
-
-			
+						
 +max-screen(1200px)
 	// Header
 	.header
@@ -134,11 +136,14 @@
 +max-screen(1100px)
 	.gutter
 		&-top
-			padding-top 90px
+			padding-top 70px
 		&-bottom
-			padding-bottom 80px
+			padding-bottom 70px
 	.gutters
-		padding 90px 0
+		padding 70px 0
+		
+	.sect__contacts
+		padding 70px 0
 		
 	.sect__title
 		font-size 32px
@@ -497,6 +502,42 @@
 			margin-bottom 20px
 		.sect__title
 			margin-bottom 20px !important
+			
+	// About
+	.page__header
+		.sect__title
+			margin-bottom 35px !important
+			
+	.about-us
+		&__quote
+			font-size 28px
+			margin-top 40px
+			&:before
+				width 42px
+				height 30px
+				
+		&__advantages 
+			.advantage
+				width 33.3333%
+				
+
+	// Service
+	.order__block
+		padding-left 25px
+		padding-right 25px
+		
+	// Feedbacks
+	.feedback
+		padding 25px 0
+		&__content
+			padding-left 65px
+			&:before
+				width 42px
+				height 30px
+		&__answer
+			padding-left 130px
+			&--content
+				padding-top 25px
 				
 +max-screen(1000px)
 	body
@@ -684,7 +725,27 @@
 	.block__404
 		padding-top 0
 		
+	// About
+	.about-us__advantages 
+		.advantage
+				width 50%
 				
+	// Feedbacks
+	.feedback
+		&__name
+			font-size 18px
+			margin-bottom 5px
+		&__date
+			margin-bottom 15px
+		&__content
+			padding-left 0
+			padding-top 50px
+		&__answer
+			padding-left 25px
+			
+		&__text
+			font-size 16px
+						
 +max-screen(700px)
 	.btn__top
 		width 30px
@@ -748,7 +809,10 @@
 			
 		.btn__callback
 			width 100%
-			
+	
+	button[type=submit].btn
+		padding-top 22px		
+		padding-bottom 22px		
 	.btn
 		padding 15px
 		&__search--mobile,
@@ -876,6 +940,41 @@
 	.gallery-card
 		&__wrapper
 			width 50%
+			
+	// About
+	.page__header
+		min-height auto
+		padding 25px 0 100px
+		&:before
+			pseudo()
+			position absolute
+			fullSize()
+			background-color rgba($light-color, .4)
+		&--content
+			&_block
+				max-width 100%
+				&:before
+					display none
+					
+	// Service
+	.order__block
+		padding-left 15px
+		padding-right 15px
+		margin-left -15px
+		margin-right -15px
+		
+	// Feedbacks
+	.sect__feedback-form
+		padding-bottom 0
+	.feedback-form__row 
+		.feedback-form__input--wrapper
+			width 100%
+			padding-bottom 20px
+			
+	.feedback-form__input--wrapper
+		margin-bottom 20px
+			
+
 +max-screen(500px)
 	// Header
 	.header
@@ -940,7 +1039,7 @@
 +max-screen(450px)
 	.sect__title
 		font-size 24px
-		margin-bottom 40px !important
+		margin-bottom 30px !important
 		
 	.content
 		font-size 16px
@@ -1080,6 +1179,8 @@
 	// Page
 	.page
 		padding-top 20px
+		&-no-gutter
+			padding-top 0
 		
 	.breadcrumbs__link
 		font-size 12px
@@ -1124,6 +1225,20 @@
 			&--title
 				font-size 18px
 				margin-bottom 5px
+				
+	// About
+	.about-us
+		&__quote
+			font-size 20px
+			line-height 1.45
+			padding-top 35px
+			
+		&__advantages 
+			.advantage
+				width 100%
+				padding 0 15px 30px 15px
+			.block-with-ic__ic
+				margin-bottom 15px
 +min-screen(2200px)
 	// Promo
 	.promo-slide__bg

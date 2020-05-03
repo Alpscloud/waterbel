@@ -1,0 +1,72 @@
+.feedback
+	padding 40px 0
+	border-bottom 1px solid $border-color
+	&:first-child
+		border-top 1px solid $border-color
+	&__content
+		padding-left 100px
+		position relative
+		&:before
+			pseudo()
+			top 0
+			left 0
+			width 52px
+			height 40px
+			position absolute
+			background url('../img/icons/svg/quote.svg') 50% 50% no-repeat / contain
+	&__name
+		font 20px $Bold
+		color $dark-secondary-color
+		margin-bottom 15px
+		
+	&__date
+		color $light-text-color
+		margin-bottom 30px
+		
+	&__text
+		font-size 18px
+		line-height 1.5
+		
+	&__answer
+		margin-top 40px
+		padding-left 200px
+		&--content
+			padding-top 40px
+			border-top 1px solid $border-color
+			
+	&-form
+		max-width 1000px
+		margin 0 auto
+		
+		&__row
+			.feedback-form__input--wrapper
+				width 50%
+				padding 0 15px 30px 15px
+				margin-bottom 0
+		&__label
+			display block
+			font 18px $Med
+			color $dark-secondary-color
+			margin-bottom 10px
+			text-align left
+		&__input
+			display block
+			width 100%
+			border-radius 5px
+			background-color rgba($accent-color, .1)
+			border 1px solid transparent
+			padding 10px
+			font 16px $Reg
+			color $dark-color
+			&:hover,
+			&:focus
+				border-color $secondary-color
+				
+			&.is-error
+				border-color red
+			
+			&--wrapper
+				margin-bottom 30px
+				
+.textarea
+	min-height 200px

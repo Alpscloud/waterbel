@@ -17,6 +17,16 @@ $(document).ready(function() {
 		}, 200);
 	});
 
+	// ========= Smooth scrolling to the acnhors ===========
+	$('.js-smooth-scroll-link').on('click', function (e) {
+		e.preventDefault();
+		var id = $(this).attr('href'),
+			top = $(id).offset().top;
+
+		$('html, body').animate({scrollTop: top}, 'slow');
+	});	
+	// ========= =========== =========== ===========
+
 	// ========== Scroll-to-top button ==========
 	$(window).on('scroll', function () {
 		if ($(this).scrollTop() > 350) {

@@ -4,12 +4,201 @@
 	<!-- CONTENT WRAPPER -->
 	<div class="content__wrapper">
 
+		{% include '../parts/components/popup.html' %}
+		{% include '../parts/components/go-to-top-button.html' %}
+		
+
 		<!-- Header -->
 		{% include '../parts/sections/header.html' %}
 		<!-- //Header -->
 
 		<!-- Main -->
 		<main class="main">
+
+			<section class="page page-no-gutter">
+				<h2 class="w3c">&nbsp;</h2>
+				
+				<!-- Page header -->
+				<div class="page__header color-bg bg" style="background-image: url('img/backgrounds/service-bg.jpg');">
+					<!-- Breadcrumbs -->
+					<div class="breadcrumbs">
+						<div class="container">
+							<ul class="breadcrumbs__list">
+								<li class="breadcrumbs__item"><a href="index.html" class="breadcrumbs__link">Главная</a></li>
+								<li class="breadcrumbs__item"><a href="page-services.html" class="breadcrumbs__link">Услуги</a></li>
+								<li class="breadcrumbs__item"><span class="breadcrumbs__link is-active">Название услуги</span></li>
+							</ul>
+						</div>
+						<!-- //container -->
+					</div>
+					<!-- //Breadcrumbs -->
+
+					<div class="container">
+						<div class="page__header--content_block">
+							<div class="page__header--content">
+								<h3 class="sect__title">Монтаж и пуско-наладка водоочистного оборудования</h3>
+								<p>Успешно устанавливаем и запускаем в работу<br>водоочистное оборудование с 2003 года</p>
+
+								<a href="#order" class="btn btn-accent js-smooth-scroll-link">Заказать услугу</a>
+							</div>
+						</div>
+					</div>
+					<!-- //container -->
+
+
+				</div>
+				<!-- //Page header -->
+
+				<!-- Page body -->
+				<div class="page-body">
+					
+					<section class="about-us gutters">
+						<h3 class="w3c">&nbsp;</h3>
+
+						<div class="container">
+							<div class="content text-center">
+								<h2>Услуга монтажа и пуско-наладки</h2>
+								<p>Монтаж является одним из заключающих этапов проектирования. В кратчайшие сроки технические специалисты монтируют оборудование и запускают его в работу. Как правило, установка оборудования занимает один-два дня, в зависимости от сложности проекта. Время предварительно оговаривается с заказчиком. Если у Вас уже стоит водоочистное оборудование, но оно морально и технически устарело, исчерпало свои ресурсы, не устраивает в обслуживании и, наконец, если Вас перестало устраивать качество воды на выходе, то Вам может понадобиться модернизация или реконструкция оборудования. </p>
+								<p>Модернизация действующего оборудования - это внесение в конструкцию изменений и усовершенствований, повышающих его технический уровень и эксплуатационные параметры: производительность, долговечность, легкость обслуживания. Реконструкция производства - комплекс мер по увеличению производственных мощностей, технического уровня производства с целью увеличения выпуска продукции. При модернизации и реконструкции мы стараемся найти оптимальные решения для дальнейшего использования имеющегося оборудования и выполняем только реально необходимые замены.</p>
+							</div>
+						</div>
+					</section>
+
+					<section class="sect__order" id="order">
+						<h2 class="w3c">&nbsp;</h2>
+						
+
+						<div class="container">
+							<div class="order__block border-radius gutters">
+								<div class="order__block--content">
+									<h3 class="sect__title text-center">Закажите услугу</h3>
+									<p class="order__text">Заполните форму и мы перезвоним Вам для обсуждения деталей в течении 15 минут</p>
+
+									<form class="order-form">
+										<div class="row align-horisontal-start row-gutters">
+											<div class="input__col">
+												<div class="input__wrapper">
+													<input type="text" class="input  js-input" name="name" placeholder="Ваше имя">
+												</div>
+											</div>
+											<div class="input__col">
+												<div class="input__wrapper">
+													<input type="tel" class="input js-input" name="phone" placeholder="Ваш телефон">
+												</div>
+											</div>
+											<div class="input__col">
+												<button class="btn btn-accent" type="submit">оставить заявку</button>
+											</div>
+										</div>
+
+										<p class="text-center form__notice">* - мы не передаем Ваши данные третьим лицам согласно нашей <a href="page-content.html">политике конфиденциальности</a></p>
+									</form>
+								</div>
+							</div>
+						</div>
+						<!-- //container -->
+					</section>
+
+					<section class="about-us gutters">
+						<h2 class="sect__title text-center container">Другие услуги нашей компании</h2>
+
+						<div class="container">
+							<div class="services">
+								<div class="row row-gutters align-horisontal-start services__row">
+									<!-- Service item -->
+									<div class="service__wrapper">
+										<div class="block-with-ic">
+											<i class="block-with-ic__ic" style="background-image: url('img/icons/svg/services/1.svg');"></i>
+											<div class="block-with-ic__content">
+												<h3 class="block-with-ic__title"><a href="page-service.html">Консультация</a></h3>
+												<p>Помогаем подобрать систему очистки воды, а также отвечаем на любые вопросы, связанные с сервисом и гарантией</p>
+											</div>
+										</div>
+									</div>
+									<!-- //Service item -->
+
+									<!-- Service item -->
+									<div class="service__wrapper">
+										<div class="block-with-ic">
+											<i class="block-with-ic__ic" style="background-image: url('img/icons/svg/services/2.svg');"></i>
+											<div class="block-with-ic__content">
+												<h3 class="block-with-ic__title"><a href="page-service.html">Анализ воды</a></h3>
+												<p>Проводим химический анализ воды для правильного подбора водоочистного оборудования, исходя из загрязнения</p>
+											</div>
+										</div>
+									</div>
+									<!-- //Service item -->
+
+									<!-- Service item -->
+									<div class="service__wrapper">
+										<div class="block-with-ic">
+											<i class="block-with-ic__ic" style="background-image: url('img/icons/svg/services/3.svg');"></i>
+											<div class="block-with-ic__content">
+												<h3 class="block-with-ic__title"><a href="page-service.html">Проектные работы</a></h3>
+												<p>Основываясь на данных анализа, разрабатываем оптимальную технологическую схему водоподготовки</p>
+											</div>
+										</div>
+									</div>
+									<!-- //Service item -->
+
+									<!-- Service item -->
+									<div class="service__wrapper">
+										<div class="block-with-ic">
+											<i class="block-with-ic__ic" style="background-image: url('img/icons/svg/services/4.svg');"></i>
+											<div class="block-with-ic__content">
+												<h3 class="block-with-ic__title"><a href="page-service.html">Подбор оборудования</a></h3>
+												<p>Подбираем оптимальное решение и предлагаем необходимый комплект водоочистного оборудования</p>
+											</div>
+										</div>
+									</div>
+									<!-- //Service item -->
+
+									<!-- Service item -->
+									<div class="service__wrapper">
+										<div class="block-with-ic">
+											<i class="block-with-ic__ic" style="background-image: url('img/icons/svg/services/6.svg');"></i>
+											<div class="block-with-ic__content">
+												<h3 class="block-with-ic__title"><a href="page-service.html">Реконструкция</a></h3>
+												<p>Проводим реконструкцию и модернизацию уже имеющегося устаревшего водоочистного оборудования</p>
+											</div>
+										</div>
+									</div>
+									<!-- //Service item -->
+
+									<!-- Service item -->
+									<div class="service__wrapper">
+										<div class="block-with-ic">
+											<i class="block-with-ic__ic" style="background-image: url('img/icons/svg/services/7.svg');"></i>
+											<div class="block-with-ic__content">
+												<h3 class="block-with-ic__title"><a href="page-service.html">Сервис</a></h3>
+												<p>Выполняем разовое и годовое сервисное обслуживание оборудования согласно перечню выполняемых работ</p>
+											</div>
+										</div>
+									</div>
+									<!-- //Service item -->
+
+									<!-- Service item -->
+									<div class="service__wrapper">
+										<div class="block-with-ic">
+											<i class="block-with-ic__ic" style="background-image: url('img/icons/svg/services/8.svg');"></i>
+											<div class="block-with-ic__content">
+												<h3 class="block-with-ic__title"><a href="page-service.html">Гарантия</a></h3>
+												<p>В течении срока гарантии (1 год) консультируем и бесплатно осуществляем замену неисправных элементовй</p>
+											</div>
+										</div>
+									</div>
+									<!-- //Service item -->
+								</div>
+							</div>
+						</div>
+						<!-- //container -->
+					</section>
+
+				</div>
+				<!-- //Page body -->
+
+			</section>
+
 		</main>
 		<!-- //Main -->
 

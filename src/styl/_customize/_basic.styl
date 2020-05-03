@@ -299,20 +299,24 @@ b, strong
 		.btn
 			margin-top 50px
 		&--content
-			max-width 620px
-			position relative
-			&:before
-				pseudo()
-				position absolute
-				top -135px
-				left -300px
-				background url('../img/backgrounds/overlay.png') no-repeat
-				width 1075px
-				height 626px
-			
-		.container
 			position relative
 			z-index 1
+			&_block
+				max-width 620px
+				position relative
+				&:before
+					pseudo()
+					position absolute
+					top -135px
+					left -300px
+					background url('../img/backgrounds/overlay.png') no-repeat
+					width 1075px
+					height 626px
+			
+			
+		.breadcrumbs
+			position relative
+			z-index 2
 		
 			
 		
