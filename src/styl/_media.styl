@@ -37,7 +37,11 @@
 		padding-bottom 20px
 			
 	// Promo
+	.promo__slider
+		height 500px
 	.promo-slide
+		background-position right -320px center
+
 		&__title
 			font-size 40px
 		&__text
@@ -143,6 +147,22 @@
 			&:before
 				width 80px
 				height 60px
+				
+	.content
+		font-size 16px
+		
+		h2
+			font-size 32px
+			margin-bottom 35px
+		h3
+			font-size 28px
+			margin-bottom 30px
+		h4
+			font-size 24px
+			margin-bottom 25px
+		h5
+			font-size 20px
+			margin-bottom 20px
 				
 	// Header
 	.header
@@ -330,6 +350,8 @@
 				
 	// Promo
 	.promo-slide
+		background-position right -400px center
+	
 		&__title
 			font-size 32px
 		&__text
@@ -452,8 +474,29 @@
 				font-size 14px
 					
 
+	// Page
+	.page
+		border-top 1px solid $border-color
 		
+	.breadcrumbs
+		margin-bottom 20px
+	
+
+	// 404
+	.block__404
+		padding-top 0
 		
+		img
+			max-width 75%
+			
+		p
+			font-size 18px
+			
+	.thanks
+		img
+			margin-bottom 20px
+		.sect__title
+			margin-bottom 20px !important
 				
 +max-screen(1000px)
 	body
@@ -495,6 +538,7 @@
 		
 	// Promo
 	.promo-slide
+		background-position right -500px center
 		&__bg
 			padding-top 60%
 			
@@ -513,6 +557,25 @@
 	// Seo
 	.seo-content
 		padding-right 0
+		
+	// Gallery
+	.gallery-card
+		&__wrapper
+			padding 7.5px
+			
+	// Contacts
+	.page-contacts
+		.contacts
+			&__row
+				flex-wrap wrap
+			&__col
+				width 100%
+				padding-right 0
+				
+		.map__col
+			width 100%
+			height 400px
+			flex none
 			
 +max-screen(800px)
 	// Header
@@ -541,6 +604,30 @@
 			font-size 14px
 			&__wrapper
 				min-width 130px
+				
+	// Promo
+	.promo
+		&__slider
+			height auto
+		&-slide
+			background-size 0 0 
+			&__content
+				position relative
+				flex-direction column
+				&--block
+					width 100%
+					max-width 100%
+					order 2
+					padding-right 0
+					margin-top 30px
+				
+				&--img
+					align-items flex-start
+					order 1
+					width 100%
+					img
+						max-height 260px
+						margin 0
 	
 
 	// Categories
@@ -592,6 +679,10 @@
 		&__wrapper
 			width 33.3333%
 			padding 7.5px
+			
+	// 404
+	.block__404
+		padding-top 0
 		
 				
 +max-screen(700px)
@@ -781,8 +872,10 @@
 					&:last-child
 						margin-bottom 0
 					
-		
-		
+	// Gallery
+	.gallery-card
+		&__wrapper
+			width 50%
 +max-screen(500px)
 	// Header
 	.header
@@ -848,6 +941,33 @@
 	.sect__title
 		font-size 24px
 		margin-bottom 40px !important
+		
+	.content
+		font-size 16px
+		
+		h2
+			font-size 24px
+			margin-bottom 30px
+		h3
+			font-size 22px
+			margin-bottom 25px
+		h4
+			font-size 20px
+			margin-bottom 20px
+		h5
+			font-size 18px
+			margin-bottom 20px
+		h6
+			margin-bottom 15px
+			
+		p
+			margin-bottom 20px
+			
+		img
+			margin 40px 0
+			
+		ol, ul
+			margin-bottom 20px
 	// Header
 	.header
 		&__phones
@@ -866,18 +986,28 @@
 					
 		
 	// Promo
+
+	
 	.promo-slide
-		&__bg
-			padding-top 110%
+		padding 20px 0 70px
 		&__title
-			font-size 20px
+			font-size 22px
 		&__text
-			font-size 14px
+			font-size 16px
 		&__price
-			font-size 20px
+			font-size 24px
 			
 		.btn__with-logo
 			margin-top 15px
+			
+		&__content
+			&--img
+				align-items center
+				img
+					max-height 200px
+			&--block
+				margin-top 15px
+				text-align center
 			
 	// Categoreis
 	.category
@@ -945,6 +1075,55 @@
 		background-size auto 300px
 		padding-top 280px
 		
+
+		
+	// Page
+	.page
+		padding-top 20px
+		
+	.breadcrumbs__link
+		font-size 12px
+		
+	.pagination
+		&__link
+			font-size 12px
+			width 30px
+			height 30px
+		&__item
+			margin-right 12px
+			&:last-child
+				margin-right 0
+		
+	// Blog
+	.page-content
+		.article-card__wrapper
+			padding 0 7.5px 30px 7.5px
+			
+
+	// 404
+	.block__404
+		img
+			margin-top 0
+		.sect__title
+			font-size 24px
+	
+	.thanks
+		.sect__title
+			margin-bottom 20px !important
+		p
+			margin-bottom 20px
+			
+		img
+			margin-bottom 20px 
+			
+	// Contacts
+	.page-contacts
+		&__item
+			font-size 16px
+			margin-bottom 30px
+			&--title
+				font-size 18px
+				margin-bottom 5px
 +min-screen(2200px)
 	// Promo
 	.promo-slide__bg

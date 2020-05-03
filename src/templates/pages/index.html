@@ -20,17 +20,17 @@
 				<h2 class="w3c">&nbsp;</h2>
 				
 				<!-- Slider -->
-				<div class="promo__slider">
+				<div class="promo__slider color-bg">
 					<div class="swiper-container js-promo-slider">
 						<div class="swiper-wrapper">
 							<!-- Slide -->
 							<div class="swiper-slide">
 								<div class="promo-slide">
-									<div class="promo-slide__bg bg color-bg" style="background-image: url('img/promo/1.png');"></div>
-									<div class="promo-slide__content">
-										<div class="container">
+									<div class="container">
+										<div class="promo-slide__content">
+
 											<div class="promo-slide__content--block">
-												<h3 class="promo-slide__title">Специальное<br>предложение!</h3>
+												<h3 class="promo-slide__title">Специальное предложение!</h3>
 												<p class="promo-slide__text">Умягчитель <strong>ГЕЙЗЕР-1054</strong> по специальной цене:</p>
 												<p class="promo-slide__price price">27 000</p>
 												<a href="page-product.html" class="btn__with-logo letter-spacing">
@@ -39,15 +39,54 @@
 														<img src="img/btn-logo.svg" alt="Waterbel">
 													</span>
 												</a>
+
+												
 											</div>
+
+											<div class="promo-slide__content--img">
+												<img src="img/promo/product-1.png" alt="">
+											</div>
+
 										</div>
 									</div>
+									<!-- //container -->
 								</div>
 							</div>
 							<!-- //Slide -->
 
 							<!-- Slide -->
 							<div class="swiper-slide">
+								<div class="promo-slide">
+									<div class="container">
+										<div class="promo-slide__content">
+
+											<div class="promo-slide__content--block">
+												<h3 class="promo-slide__title">Только сегодня!</h3>
+												<p class="promo-slide__text">Фильтр <strong>Platinum Wasser Ultra 6</strong>по специальной цене:</p>
+												<p class="promo-slide__price price">127 000</p>
+												<a href="page-product.html" class="btn__with-logo letter-spacing">
+													<span>Подробнее</span>
+													<span class="btn__with-logo_logo">
+														<img src="img/btn-logo.svg" alt="Waterbel">
+													</span>
+												</a>
+
+												
+											</div>
+
+											<div class="promo-slide__content--img">
+												<img src="img/promo/product-2.webp" alt="">
+											</div>
+
+										</div>
+									</div>
+									<!-- //container -->
+								</div>
+							</div>
+							<!-- //Slide -->
+
+							<!-- Slide -->
+							<!-- <div class="swiper-slide">
 								<div class="promo-slide">
 									<div class="promo-slide__bg bg color-bg" style="background-image: url('img/promo/1.png');"></div>
 									<div class="promo-slide__content">
@@ -66,7 +105,7 @@
 										</div>
 									</div>
 								</div>
-							</div>
+							</div> -->
 							<!-- //Slide -->
 						</div>
 					</div>
@@ -171,7 +210,7 @@
 										</div>
 									</div>
 
-									<p class="text-center light-color form__notice">* - мы не передаем Ваши данные третьим лицам согласно нашей <a href="#">политике конфиденциальности</a></p>
+									<p class="text-center light-color form__notice">* - мы не передаем Ваши данные третьим лицам согласно нашей <a href="page-content.html">политике конфиденциальности</a></p>
 								</form>
 							</div>
 
@@ -530,74 +569,14 @@
 				<h2 class="container sect__title sect__title--with-logo text-center">Наши клиенты</h2>
 
 				<div class="container">
+					<!-- Clients -->
 					<div class="clients">
 						<div class="row row-gutters align-horisontal-start clients__row">
-							<!-- Client -->
-							<div class="client__wrapper">
-								<a href="#" class="client border-radius" target="_blank">
-									<img src="img/clients/1.png" alt="">
-								</a>
-							</div>
-							<!-- //Client -->
-
-							<!-- Client -->
-							<div class="client__wrapper">
-								<a href="#" class="client border-radius" target="_blank">
-									<img src="img/clients/2.png" alt="">
-								</a>
-							</div>
-							<!-- //Client -->
-
-							<!-- Client -->
-							<div class="client__wrapper">
-								<a href="#" class="client border-radius" target="_blank">
-									<img src="img/clients/3.png" alt="">
-								</a>
-							</div>
-							<!-- //Client -->
-
-							<!-- Client -->
-							<div class="client__wrapper">
-								<a href="#" class="client border-radius" target="_blank">
-									<img src="img/clients/4.png" alt="">
-								</a>
-							</div>
-							<!-- //Client -->
-
-							<!-- Client -->
-							<div class="client__wrapper">
-								<a href="#" class="client border-radius" target="_blank">
-									<img src="img/clients/5.png" alt="">
-								</a>
-							</div>
-							<!-- //Client -->
-
-							<!-- Client -->
-							<div class="client__wrapper">
-								<a href="#" class="client border-radius" target="_blank">
-									<img src="img/clients/6.png" alt="">
-								</a>
-							</div>
-							<!-- //Client -->
-
-							<!-- Client -->
-							<div class="client__wrapper">
-								<a href="#" class="client border-radius" target="_blank">
-									<img src="img/clients/7.png" alt="">
-								</a>
-							</div>
-							<!-- //Client -->
-
-							<!-- Client -->
-							<div class="client__wrapper">
-								<a href="#" class="client border-radius" target="_blank">
-									<img src="img/clients/8.png" alt="">
-								</a>
-							</div>
-							<!-- //Client -->
+							{% include '../parts/components/clients.html' %}
 						</div>
 						<!-- //row -->
 					</div>
+					<!-- //Clients -->
 
 					<div class="text-center permalink-block">
 						<a href="page-clients.html" class="btn btn-shadow">все клиенты</a>
@@ -614,101 +593,10 @@
 				<div class="container">
 					<div class="articles">
 						<div class="row row-gutters align-horisontal-start articles__row">
-							<!-- Article -->
-							<div class="article-card__wrapper">
-								<article class="article-card">
-									<!-- Thumbnail -->
-									<div class="article-card__thumbnail--wrapper">
-										<a href="page-article.html" class="article-card__thumbnail">
-											<img src="img/articles/1.png" alt="">
-										</a>
-										<p class="article-card__date">22.12.2020</p>
-									</div>
-									<!-- //Thumbnail -->
-
-									<div class="article-card__content">
-										<h3 class="article-card__title">
-											<a href="page-article.html">Переключатели потоков Clack WS</a>
-										</h3>
-										<p>Представляем универсальные переключатели потоков воды компании CLACK Corp.  модельного ряда Water Specialist (WS)</p>
-
-										<a href="page-article.html" class="read-more-link">Читать далее</a>
-									</div>
-								</article>
-							</div>
-							<!-- //Article -->
-
-							<!-- Article -->
-							<div class="article-card__wrapper">
-								<article class="article-card">
-									<!-- Thumbnail -->
-									<div class="article-card__thumbnail--wrapper">
-										<a href="page-article.html" class="article-card__thumbnail">
-											<img src="img/articles/2.png" alt="">
-										</a>
-										<p class="article-card__date">22.12.2020</p>
-									</div>
-									<!-- //Thumbnail -->
-
-									<div class="article-card__content">
-										<h3 class="article-card__title">
-											<a href="page-article.html">Чистая вода вместо чистых иллюзий</a>
-										</h3>
-										<p>Системы очистки питьевой воды для установки в доме, квартире, офисе, барах и кафе</p>
-
-										<a href="page-article.html" class="read-more-link">Читать далее</a>
-									</div>
-								</article>
-							</div>
-							<!-- //Article -->
-
-							<!-- Article -->
-							<div class="article-card__wrapper">
-								<article class="article-card">
-									<!-- Thumbnail -->
-									<div class="article-card__thumbnail--wrapper">
-										<a href="page-article.html" class="article-card__thumbnail">
-											<img src="img/articles/3.png" alt="">
-										</a>
-										<p class="article-card__date">22.12.2020</p>
-									</div>
-									<!-- //Thumbnail -->
-
-									<div class="article-card__content">
-										<h3 class="article-card__title">
-											<a href="page-article.html">Осенние супер-цены на лучшие насосные станции ESPA (Испания)</a>
-										</h3>
-										<p>Мы снизили для Вас цены до 40% на самые популярные модели супер-надежных насосов ESPA (Испания)</p>
-
-										<a href="page-article.html" class="read-more-link">Читать далее</a>
-									</div>
-								</article>
-							</div>
-							<!-- //Article -->
-
-							<!-- Article -->
-							<div class="article-card__wrapper">
-								<article class="article-card">
-									<!-- Thumbnail -->
-									<div class="article-card__thumbnail--wrapper">
-										<a href="page-article.html" class="article-card__thumbnail">
-											<img src="img/articles/4.png" alt="">
-										</a>
-										<p class="article-card__date">22.12.2020</p>
-									</div>
-									<!-- //Thumbnail -->
-
-									<div class="article-card__content">
-										<h3 class="article-card__title">
-											<a href="page-article.html">"Белгородская вода"</a>
-										</h3>
-										<p>Что значит "белгородская вода" и надо ли с ней бороться?</p>
-
-										<a href="page-article.html" class="read-more-link letter-spacing">Читать далее</a>
-									</div>
-								</article>
-							</div>
-							<!-- //Article -->
+							{% include '../parts/components/article-card.html' %}
+							{% include '../parts/components/article-card.html' %}
+							{% include '../parts/components/article-card.html' %}
+							{% include '../parts/components/article-card.html' %}
 						</div>
 					</div>
 
@@ -784,7 +672,7 @@
 												<input type="tel" class="input js-input" name="phone" placeholder="Ваш телефон">
 											</div>
 											<button class="btn btn-accent btn-hover-dark btn-wide" type="submit">оставить заявку</button>
-											<p class="text-center form__notice">* - мы не передаем Ваши данные третьим лицам согласно нашей <a href="#">политике конфиденциальности</a></p>
+											<p class="text-center form__notice">* - мы не передаем Ваши данные третьим лицам согласно нашей <a href="page-content.html">политике конфиденциальности</a></p>
 										</form>
 									</div>
 								</div>

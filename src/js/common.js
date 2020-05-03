@@ -163,12 +163,17 @@ $(document).ready(function() {
 			el: '.js-promo-slider-pagination',
 			clickable: true
 		},
-		touchRatio: 0,
+		touchRatio: 1,
 		autoplay: {
 			delay: 5000,
 			disableOnInteraction: false,
 
 		},
+		breakpoints: {
+			769: {
+				touchRatio: 0
+			}
+		}
 	});
 
 	var feedbacksSlider = new Swiper('.js-feedbacks-slider', {
@@ -279,13 +284,15 @@ $(document).ready(function() {
 			styles: style
 		};
 		// Init map
-		var map = new google.maps.Map(document.getElementById('map'), map_options),
-			marker = new google.maps.Marker({
-				position: new google.maps.LatLng(latitude, longitude),
-				map: map,
-				visible: true,
-				icon: marker_url
-			});
+		if($('#map').length > 0) {
+			var map = new google.maps.Map(document.getElementById('map'), map_options),
+				marker = new google.maps.Marker({
+					position: new google.maps.LatLng(latitude, longitude),
+					map: map,
+					visible: true,
+					icon: marker_url
+				});
+		}
 	// ========= =========== =========== ===========
 
 	$('input[type=tel]').mask('+7 (999) 999-99-99');

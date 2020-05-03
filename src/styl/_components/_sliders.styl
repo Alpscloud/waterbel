@@ -49,15 +49,31 @@
 	
 	&-slide
 		position relative
-		&__bg
-			padding-top 40%
+		background $color-bg url('../img/promo/decor.png') no-repeat right center 
+		
+		padding 40px 0
+		display flex
+		align-items center 
+		overflow hidden
+		
+		.container
+			height 100%
 		&__content
-			position absolute
-			position-center()
-			width 100%
-			z-index 1
+			display flex
+			align-items center
+			justify-content space-between
+			height 100%
 			&--block
-				max-width 50%
+				width 55%
+				padding-right 5%
+			&--img
+				width 45%
+				flex-col-center()
+				height 100%
+				img
+					display block
+					@extends .content-img
+				
 		&__title
 			font 56px $Bold
 			color $dark-secondary-color
@@ -79,18 +95,23 @@
 			
 	&__slider
 		position relative
+		height 700px
+		.swiper-container,
+		.swiper-wrapper,
+		.swiper-slider,
+		.promo-slide
+			height 100%
 		&--pagination
 			position absolute
-			position-center()
+			horisontal-center()
 			z-index 2
-			pointer-events none
-			display flex
-			flex-direction column
-			align-items flex-end
+			bottom 20px
+			text-align center
 			span
 				pointer-events auto
 				
 			.swiper-pagination-bullet
+				display inline-block
 				width 14px
 				height 14px
 				border-radius 50%
@@ -99,9 +120,9 @@
 				transition all .17s ease-in-out
 				opacity 1
 				outline none
-				margin-bottom 30px
+				margin-right 30px
 				&:last-child
-					margin-bottom 0
+					margin-right 0
 				&:hover,
 				&-active
 					background-color $secondary-color

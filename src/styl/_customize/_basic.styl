@@ -183,12 +183,138 @@ b, strong
 	margin-top 45px
 	
 .content
+	color $content-text-color
+	font-size 18px
+	h2,h3,h4,h5,h6
+		font-family $ExBold
+		color $dark-secondary-color
+		&:last-child
+			margin-bottom 0
+	h2
+		font-size 42px
+		margin-bottom 60px
+			
+	h3
+		font-size 36px
+		margin-bottom 50px
+		
+	h4
+		font-size 30px
+		margin-bottom 40px
+		
+	h5
+		font-size 24px
+		margin-bottom 30px
+		
+	h6
+		font-size 18px
+		margin-bottom 20px
+			
+	b, strong
+		font-family $Bold
+		
+	i
+		font-family $Italic
+		
+	img
+		display block
+		border-radius 10px
+		margin 60px 0
+		&:last-child
+			margin-bottom 0
+			
+	a
+		color $accent-color
+		border-bottom 1px solid
+		&:hover
+			border-color transparent
+		
+		
 	p
 		margin-bottom 40px
 		&:last-child
 			margin-bottom 0
 			
+	iframe, video
+		display block
+		height 350px
+		
+	ul, ol
+		margin-bottom 40px
+		li
+			position relative
+			display block
+			margin-bottom 15px
+			&:last-child
+				margin-bottom 0
+		&:last-child
+			margin-bottom 0
+			
+	ul
+		li
+			&:before
+				pseudo()
+				border-radius 50%
+				width 6px
+				height 6px
+				background-color $dark-secondary-color
+				vertical-align middle
+				margin-right 10px
+				transform translateY(-2px)
+				
+	ol
+		counter-reset list
+		li
+			&:before
+				counter-increment list
+				content counter(list) ". "
+				color $dark-secondary-color
+				font-family $Med
+				margin-right 5px
+				
+		
+
+			
 .f-f-medium
 	font-family $Med
+	
+
+.page
+	padding-top 50px	
+	&-no-gutter
+		padding-top 0
+	.sect__seo
+		padding-bottom 0
+		
+	&__header
+		position relative
+		padding 50px 0
+		min-height 710px
+		color $dark-secondary-color
+		font-size 20px
+		overflow hidden
+		.sect__title
+			margin-bottom 40px
+			
+		.btn
+			margin-top 50px
+		&--content
+			max-width 620px
+			position relative
+			&:before
+				pseudo()
+				position absolute
+				top -135px
+				left -300px
+				background url('../img/backgrounds/overlay.png') no-repeat
+				width 1075px
+				height 626px
+			
+		.container
+			position relative
+			z-index 1
+		
+			
+		
 
 // ========== ========== ========== ========== ========== ==========

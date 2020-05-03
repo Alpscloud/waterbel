@@ -4,12 +4,92 @@
 	<!-- CONTENT WRAPPER -->
 	<div class="content__wrapper">
 
+		{% include '../parts/components/popup.html' %}
+		{% include '../parts/components/go-to-top-button.html' %}
+		
+
 		<!-- Header -->
 		{% include '../parts/sections/header.html' %}
 		<!-- //Header -->
 
 		<!-- Main -->
 		<main class="main">
+
+			<section class="page gutter-bottom">
+				<h2 class="w3c">&nbsp;</h2>
+
+				<!-- Breadcrumbs -->
+				<div class="breadcrumbs">
+					<div class="container">
+						<ul class="breadcrumbs__list">
+							<li class="breadcrumbs__item"><a href="index.html" class="breadcrumbs__link">Главная</a></li>
+							<li class="breadcrumbs__item"><span class="breadcrumbs__link is-active">Контакты</span></li>
+						</ul>
+					</div>
+					<!-- //container -->
+				</div>
+				<!-- //Breadcrumbs -->
+				
+				<!-- Page content -->
+				<section class="page-content container">
+					<h2 class="w3c">&nbsp;</h2>
+
+					<!-- Contacts -->
+					<div class="contacts page-contacts">
+						<div class="row contacts__row">
+							<div class="contacts__col">
+								<h3 class="sect__title">Контакты</h3>
+
+								<div class="page-contacts__items">
+									<div class="page-contacts__item">
+										<h4 class="page-contacts__item--title">Адрес офиса:</h4>
+										<p>Белгород, ул. Есенина, д.8</p>
+									</div>
+
+									<div class="page-contacts__item">
+										<h4 class="page-contacts__item--title">График работы:</h4>
+										<p>Пн-Пт: 09:00-19:00, Сб: 10:00-17:00<br>Вс: выходной</p>
+									</div>
+
+									<div class="page-contacts__item">
+										<p><a href="tel:+79107371493">+7 (910) 737-14-93</a></p>
+										<p><a href="tel:+79107371495">+7 (910) 737-14-95</a></p>
+										<p><a href="tel:+89103249308">+8 (910) 324-93-08</a></p>
+										<p><a href="tel:+74722231393">+7 (4722) 23-13-93</a></p>
+									</div>
+
+									<div class="page-contacts__item">
+										<p><a href="mailto:waterbel@yandex.ru">waterbel@yandex.ru</a></p>
+									</div>
+
+									<div class="page-contacts__item">
+										<button class="btn btn-accent js-open-popup-form-btn" type="button">Оставить заявку</button>
+									</div>
+								</div>
+
+							</div>
+
+							<div class="map__col">
+								<!-- Map -->
+								<div class="map__wrapper">
+									<div class="coords">
+										<span class="js-latitude">50.554806</span>
+										<span class="js-longitude">36.574300</span>
+									</div>
+									<div id="map"></div>
+								</div>
+								<!-- //Map -->
+							</div>
+
+						</div>
+					</div>
+					<!-- //Contacts -->
+
+				</section>
+				<!-- //Page content -->
+
+			</section>
+
 		</main>
 		<!-- //Main -->
 
