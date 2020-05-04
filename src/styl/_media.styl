@@ -103,6 +103,15 @@
 		&-card
 			background-size cover
 			padding 60px
+			
+	// Catalog
+	.product-card
+		width 33.3333%
+		&:nth-child(4n)
+			border-right 1px solid $border-color
+		&:nth-child(3n)
+			border-right none
+			
 						
 +max-screen(1200px)
 	// Header
@@ -539,6 +548,71 @@
 			&--content
 				padding-top 25px
 				
+	// Catalog
+	.catalog
+		padding-bottom 0
+		&__header
+			margin-bottom 25px
+			flex-wrap wrap
+			.sect__title
+				margin-bottom 0 !important
+				width 100%
+				margin-right 0
+				
+		&__tools
+			width 100%
+			display flex
+			align-items center
+			justify-content space-between
+			margin-top 25px
+		&__products
+			width 100%
+			padding-left 0
+			
+	.btn__filter
+		display inline-block
+			
+	.aside
+		position fixed
+		top 0
+		left 0
+		width 100%
+		height 100%
+		z-index 15
+		opacity 0
+		visibility hidden
+		pointer-events none
+		transition all .17s ease-in-out
+		&.is-opened
+			opacity 1
+			visibility visible
+			pointer-events auto
+			.aside
+				&__overflow
+					opacity 1
+					visibility visible
+					pointer-events auto
+					
+				&__body
+					transform translate3d(0,0,0)
+					
+		&__body
+			overflow-y auto
+			height 100%
+			width 100%
+			max-width 400px
+			transition all .17s ease-in-out
+			transition-delay .3s
+			transform translate3d(-110%, 0, 0)
+			padding-top 20px
+			padding-bottom 20px
+			
+			.btn__close
+				display inline-block
+		
+
+		
+				
 +max-screen(1000px)
 	body
 		font-size 14px
@@ -973,6 +1047,52 @@
 			
 	.feedback-form__input--wrapper
 		margin-bottom 20px
+		
+	// Catalog
+	.product-card
+		width 50%
+		&:nth-child(2n)
+			border-right none
+		&:nth-child(3n)
+			border-right 1px solid $border-color
+			
+		&__thumbnail
+			height 200px
+			padding 35px 5px 5px 5px
+		&__label
+			font-size 11px
+			top 10px
+			
+		&__title
+			margin-bottom 10px
+			
+			
+		&__price
+			font-size 18px
+			
+		&__content
+			&--body
+				padding 20px 10px 20px 10px
+				
+	.btn__filter
+		font-size 14px
+		padding-left 20px
+		
+	.sorting
+		min-width 135px
+		&__label
+			font-size 14px
+			margin-right 5px
+		&__text
+			font-size 16px
+			
+		&__dropdown
+			transform none
+			right 0
+			left auto
+			&--item
+				padding 10px
+				font-size 16px
 			
 
 +max-screen(500px)
@@ -1239,6 +1359,49 @@
 				padding 0 15px 30px 15px
 			.block-with-ic__ic
 				margin-bottom 15px
+				
+	// Catalog
+	.product-card
+		&__thumbnail
+			height 170px
+		.product__quantity
+			width 100%
+			&--input
+				padding-left 30px
+				padding-right 30px
+			
+		.btn
+			width 100%
+			
+		&__title
+			font-size 15px
+			
+	.btn__quantity
+		width 30px
+		height 30px
+		font-size 20px
+		
+	.catalog__tools
+		flex-wrap wrap
+		flex-direction column
+		align-items flex-start
+		
+	.btn__filter
+		margin-bottom 15px
+	
+	.aside
+		&__body
+			max-width 100%
+			padding-right 15px
+			transition transform .17s ease-in-out
+		&__block
+			padding 20px 10px
+			
+	.filter__block
+		padding 0
+		&--header
+			padding 20px 10px
+
 +min-screen(2200px)
 	// Promo
 	.promo-slide__bg

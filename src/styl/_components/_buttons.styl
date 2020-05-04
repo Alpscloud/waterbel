@@ -45,7 +45,10 @@
 		&:hover
 			color $light-color
 			background-color $secondary-color
-		
+	
+	&-sm
+		padding-top 16px
+		padding-bottom 16px	
 			
 	&__close
 		display inline-block
@@ -271,4 +274,71 @@
 		right 0
 		top 10px
 		display none
+		
+	&__reset
+		font 14px $Reg
+		color $text-color
+		border-bottom 1px solid transparent
+		margin-top 25px
+		&:hover
+			color $accent-color
+			border-color inherit
+			
+	&__quantity
+		width 40px
+		height 40px
+		border-radius 50%
+		background-color rgba($accent-color, .15)
+		position absolute
+		vertical-center()
+		z-index 1
+		font-family $Bold
+		font-size 22px
+		flex-col-center()
+		&:hover
+			color $light-color
+			background-color rgba($accent-color, 1)
+			
+		&.minus
+			left 0
+		&.plus
+			right 0
+			
+	&__load-more
+		display flex
+		align-items center
+		justify-content center
+		max-width 190px
+		padding 15px
+		margin 0 auto
+		&--ic
+			display block
+			width 13px
+			height 13px
+			margin-left 5px
+			
+		svg
+			svg()
+			fill $accent-color
+			
+		&:hover
+			svg
+				fill $light-color
+				
+	&__filter
+		position relative
+		padding-left 25px
+		color $dark-secondary-color
+		font 16px $Med
+		display none
+		&--ic
+			display block
+			width 15px
+			height 15px
+			position absolute
+			left 0
+			vertical-center()
+		svg
+			svg()
+			fill $dark-secondary-color
 		

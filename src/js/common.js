@@ -165,6 +165,18 @@ $(document).ready(function() {
 		li.find('.sublist').stop().slideToggle(200);
 	});
 
+	// Mobile filter
+	$('.js-open-mobile-filter-btn').on('click', function(e) {
+		e.preventDefault();
+		$('html').addClass('is-fixed');
+		$('.js-aside').addClass('is-opened');
+	});
+	$('.js-close-mobile-aside-btn').on('click', function(e) {
+		e.preventDefault();
+		$('html').removeClass('is-fixed');
+		$('.js-aside').removeClass('is-opened');
+	});
+
 	
 
 	var promoSlider = new Swiper('.js-promo-slider', {
@@ -199,11 +211,103 @@ $(document).ready(function() {
 		},
 	});
 
-	$('[data-fancybox="gallery"]').fancybox({
+	$('[data-fancybox]').fancybox({
 		loop: true,
 		buttons: ['close']
 	});
 
+	// Sorting
+	$('.js-sorting-dropdown').on('click', function(e) {
+		e.preventDefault();
+
+		var target = $(e.target);
+
+		if(target.is('li')) {
+			var sortingValue = target.attr('data-sorting-value');
+			var sortingValueText = target.text();
+
+			if(target.hasClass('is-active')) {
+				$('.js-sorting-dropdown li').removeClass('is-active');
+				target.removeClass('is-active');
+			} else {
+				$('.js-sorting-dropdown li').removeClass('is-active');
+				target.addClass('is-active');
+			}
+
+			$('.js-sorting-input').val(sortingValue);
+			$('.js-sorting-text span').html(sortingValueText);
+			
+
+		} else {
+			return;
+		}
+
+		
+	});
+
+	$('.js-filter-toggle-block').on('click', function(e) {
+		e.preventDefault();
+
+		var filterBlock = $(this).parents('.filter__block');
+
+		if(filterBlock.hasClass('is-toggled')) {
+			filterBlock.removeClass('is-toggled');
+			$(this).next('.js-filter-inputs').stop().slideUp(150);
+		} else {
+			filterBlock.addClass('is-toggled');
+			$(this).next('.js-filter-inputs').stop().slideDown(150);
+		}
+
+	});
+
+	var nonLinearSlider = document.getElementById('price');
+
+	if (nonLinearSlider) {
+
+		noUiSlider.create(nonLinearSlider, {
+			connect: true,
+			behaviour: 'tap',
+			start: [3000, 30000],
+			range: {
+				'min': [0],
+				'max': [100000]
+			}
+		});
+
+		var nodes = [
+			document.getElementById('priceLow'), // 0
+			document.getElementById('priceHigh')  // 1
+		];
+
+		var priceInput = $('.js-price-input');
+
+		nonLinearSlider.noUiSlider.on('update', function (values, handle, unencoded, isTap, positions) {
+			nodes[handle].innerHTML = values[handle];
+			priceInput.val(values[handle]);
+		});
+	}
+
+	// quantity
+	$('.product__quantity').on('click', function(event) {
+		var input = $(this).find('.js-quantity-input'),
+			value = input.val(),
+			target = $(event.target);
+		
+		if(target.attr('data-action') === 'plus') {
+			value++;
+			
+			input.val(value);
+		
+
+		} else if(target.attr('data-action') === 'minus') {	
+			if(input.val() <= 1) {return};
+			value--;	
+			
+			input.val(value);
+			
+		}
+
+	});
 	// ========= G o o g l e   m a p   s t y l e s ===========
 	var latitude = $('.js-latitude').html(), // coordinates 
 		longitude = $('.js-longitude').html(), // coordinates 

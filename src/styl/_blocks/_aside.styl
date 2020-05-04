@@ -1,0 +1,87 @@
+.aside
+	width 25%
+	
+	
+	&__overflow
+		position absolute
+		top 0
+		left 0
+		width 100vw
+		height 100vh
+		background-color rgba($dark-color, .85)
+		backface-visibility hidden
+		-webkit-backface-visibility hidden
+		-webkit-overflow-scrolling touch
+		transition all .17s ease-in-out
+		
+		opacity 0
+		visibility hidden
+		pointer-events none
+		
+	&__body
+		position relative
+		z-index 1
+		background-color $light-color
+		border 1px solid $border-color
+		
+		.btn__close
+			display none
+	
+	&__block
+		border-bottom 1px solid $border-color
+		padding 25px 15px
+		&--stock
+			padding 15px
+		&:last-child
+			border-bottom none
+			
+		&--title
+			font 18px $Bold
+			color $dark-secondary-color
+			margin-bottom 15px
+			
+	&__title
+		font 24px $Bold
+		color $dark-secondary-color
+
+		
+.filter__block
+	padding 0
+	&.is-toggled
+		.filter__block
+			&--header
+				&:after
+					transform translateY(-50%) rotate(-180deg)
+
+	&--header
+		position relative
+		padding 25px 15px
+		cursor pointer
+		
+		&:after
+			pseudo()
+			position absolute
+			right 15px
+			vertical-center()
+			transition transform .17s ease-in-out
+			background url('../img/icons/svg/catalog_sort by_arrow.svg') 50% 50% no-repeat
+			width 12px
+			height 7px
+		
+		
+		
+		.aside__block--title
+			margin-bottom 0
+			
+	&--inputs
+		padding 0 15px 25px 15px
+
+		label
+			display block
+			margin-bottom 10px
+			&:last-child
+				margin-bottom 0
+		
+.stock
+	background-color $stock-bg
+	padding 15px 10px

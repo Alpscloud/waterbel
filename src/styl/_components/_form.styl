@@ -103,17 +103,20 @@ input[type="search"]::-webkit-search-results-decoration
 	position relative
 	display inline-block
 	margin-left 0
-	padding-left 25px
+	padding-left 30px
 	font 1em $Reg
 	line-height 1
-	color $text-color
+	color $light-text-color
+	transition color .17s ease-in-out
+	&:hover
+		color $accent-color
 	&:before,
 	&:after
 		pseudo()
-		transition all .25s ease-in-out
+		transition all .17s ease-in-out
 		position absolute
 		left 0
-		vertical-center()
+		top -1px
 			
 	&__label
 		cursor pointer
@@ -124,28 +127,22 @@ input[type="search"]::-webkit-search-results-decoration
 .checkbox
 	&:before
 		border-radius 4px
-		width 18px
-		height 18px
-		border 1px solid $accent-color
-		background-color transparent
-	&:after
-		width 12px
-		height 12px
-		background url('../img/icons/svg/checkbox-ic.svg') 50% 50% no-repeat
-		background-size 12px 12px
-		position absolute
-		left 3px
-		top 8px
-		opacity 0
+		width 20px
+		height 20px
+		border 1px solid $dark-secondary-color
+		background-color transparent 
+		
+		background-position 50% 50% 
+		background-repeat no-repeat 
+		background-size 10px 10px
+
 	&__label
 		input
 			&:checked 
 				+ span
+					color $accent-color
 					&:before
-						border-color $dark-color
-						background-color $dark-color
-					&:after
-						opacity 1
+						background-image url('../img/icons/svg/checkbox-ic.svg') 
 			
 .radio
 	&:before
