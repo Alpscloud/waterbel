@@ -1,0 +1,94 @@
+.cart
+	&__header
+		border-top-left-radius 5px
+		border-top-right-radius 5px
+		border 1px solid $border-color
+		&--title
+			font 18px $Med
+			color $secondary-color
+	&__product
+		border-bottom 1px solid $border-color
+		border-left 1px solid $border-color
+		border-right 1px solid $border-color
+		position relative
+		
+		&:last-child
+			border-bottom-left-radius 5px
+			border-bottom-right-radius 5px
+			
+	&__total
+		padding 45px 0
+		border-bottom 1px solid $border-color
+		margin-bottom 45px
+		.price
+			font-size 20px
+			color $dark-secondary-color
+	
+		&--text
+			font 18px $Med
+			color $dark-secondary-color
+			display inline-block
+			line-height 1
+			margin-right 30px
+		
+	&__tools
+		.link-arrow
+			margin-right 55px
+			
+	&__col
+		padding 15px
+		text-align center
+		flex 1
+		&:nth-child(3)
+			width 170px
+			flex none
+		&:last-child
+			width 120px
+			flex none
+		&:first-child
+			width 40%
+			flex none
+			
+		.product__quantity
+			margin 0 auto
+			
+		&--mobile-label
+			font 14px $Med
+			color $secondary-color
+			display block
+			margin-bottom 5px
+			display none
+			
+	&__price
+		font 18px $Bold
+		color $accent-color
+		white-space nowrap
+		&--total
+			font 20px $Bold
+			color $dark-secondary-color
+			white-space nowrap
+			
+	&-product
+		display flex
+		align-items center
+		justify-content flex-start
+		
+		&__thumbnail
+			flex-col-center()
+			padding 5px
+			flex none
+			margin-right 50px
+			width 120px
+			height 120px
+			img
+				@extends .content-img
+			&:hover
+				opacity .75
+				
+		&__title
+			color $light-text-color
+			a
+				color inherit
+				&:hover
+					color $secondary-color
+		

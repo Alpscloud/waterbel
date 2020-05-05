@@ -49,6 +49,7 @@
 	
 	&-slide
 		position relative
+	
 		background $color-bg url('../img/promo/decor.png') no-repeat right center 
 		
 		padding 40px 0
@@ -147,6 +148,94 @@
 	&__information
 		color $light-text-color
 		font-size 18px
-					
+		
+// Product
+.product
+	&-slider
+		width 50%
+		display flex
+		position relative
+		align-items flex-start
+		&__thumbnails
+			&--col
+				width 140px
+				
+				
+			.swiper-slide-thumb-active
+				.product-slide__thumbnail
+					border-color $accent-color
+		
+		&__main
+			border-radius 5px
+			border 1px solid $border-color
+			position relative
+			height 600px
+			
+			.btn__arrow
+				&--next
+					right 10px
+				&--prev
+					left 10px
+			
+			.swiper-wrapper, .swiper-container, .swiper-slide
+				height 100%
+			&--col
+				width calc(100% - 140px)
+				padding-right 20px
+				
+	&-slide
+		&__main
+			height 100%
+			padding 25px
+			flex-col-center()
+			img
+				@extends .content-img
+				
+		&__thumbnail
+			flex-col-center()
+			position relative
+			border 1px solid $border-color
+			border-radius 5px
+			padding-top 100%
+			transition border-color .17s ease-in-out
+			cursor pointer
+			&:hover
+				border-color $accent-color
+				
+			img
+				@extends .content-img
+				max-width 90%
+				max-height 90px
+				position absolute
+				position-center()
+
+.products-cards__slider
+	position relative
+	.btn__arrow
+		&--prev
+			left 5px
+		&--next
+			right 5px
+	.swiper-wrapper
+		align-items stretch
+	.swiper-slide
+	
+		height auto
+
+	.product-card
+		border-radius 5px
+		width 100%
+		border 1px solid $border-color
+		height 100%
+		transition border-color .17s ease-in-out
+		&:hover
+			border-color $accent-color
+		&__hover
+			display none
+		&__thumbnail
+			height 270px
+			padding-top 30px
+		&__content--body
+			padding-top 10px
 			
 			

@@ -27,6 +27,8 @@ $(document).ready(function() {
 	});	
 	// ========= =========== =========== ===========
 
+
+
 	// ========== Scroll-to-top button ==========
 	$(window).on('scroll', function () {
 		if ($(this).scrollTop() > 350) {
@@ -177,6 +179,17 @@ $(document).ready(function() {
 		$('.js-aside').removeClass('is-opened');
 	});
 
+	// Product tabs
+	$('.js-tab-content').not(":first").hide();
+	$('.js-tab-btn:first').addClass('is-active');
+
+	$('.js-tab-btn').on('click', function(e) {
+		e.preventDefault();
+		$('.js-tab-content').removeClass('is-active');
+		$('.js-tab-btn').removeClass('is-active').eq($(this).index()).addClass('is-active');
+		$('.js-tab-content').hide().eq($(this).index()).fadeIn().addClass('is-active');
+	}).eq(0).addClass('is-active');
+
 	
 
 	var promoSlider = new Swiper('.js-promo-slider', {
@@ -209,6 +222,75 @@ $(document).ready(function() {
 			disableOnInteraction: false,
 
 		},
+	});
+
+	var productSliderThumbnails = new Swiper('.js-product-slider-thumbnails', {
+		direction: 'horizontal',
+		spaceBetween: 20,
+		slidesPerView: 4,
+		touchRatio: 0,
+		breakpoints: {
+			1100: {
+				direction: 'vertical'
+			}
+		}
+	});
+
+	var productSliderMain = new Swiper('.js-product-slider-main', {
+		spaceBetween: 0,
+		slidesPerView: 1,
+		autoplay: {
+			delay: 5000,
+			disableOnInteraction: false
+		},
+
+		navigation: {
+		  nextEl: '.js-product-slider-btn-next',
+		  prevEl: '.js-product-slider-btn-prev',
+		  disabledClass: 'is-disabled'
+		},
+		thumbs: {
+		  swiper: productSliderThumbnails
+		},
+		on: {
+			init: function() {
+				$('.product-slider').find('.slider__loader').hide(200);
+			}
+		},
+	});
+
+	var productsCardsSlider = new Swiper('.js-products-cards-slider', {
+		spaceBetween: 10,
+		slidesPerView: 1,
+		autoplay: {
+			delay: 7500,
+			disableOnInteraction: false
+		},
+
+		navigation: {
+		  nextEl: '.js-products-cards-slider-btn-next',
+		  prevEl: '.js-products-cards-slider-btn-prev',
+		  disabledClass: 'is-disabled'
+		},
+
+		breakpoints: {
+			1300: {
+				spaceBetween: 20,
+				slidesPerView: 5,
+			},
+			1000: {
+				spaceBetween: 20,
+				slidesPerView: 3,
+			},
+			700: {
+				spaceBetween: 10,
+				slidesPerView: 3,
+			},
+			450: {
+				spaceBetween: 10,
+				slidesPerView: 2,
+			}
+		}
 	});
 
 	$('[data-fancybox]').fancybox({

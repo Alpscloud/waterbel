@@ -341,4 +341,83 @@
 		svg
 			svg()
 			fill $dark-secondary-color
+			
+	&__tab
+		letter-spacing 0.01em
+		text-align center
+		text-transform uppercase
+		font 12px $Bold
+		color $accent-color
+		width 100%
+		max-width 300px
+		border 2px solid $accent-color
+		padding 20px
+		&.is-active,
+		&:hover
+			background-color $accent-color
+			color $light-color
+			
+	&__zoom
+		display inline-block
+		position relative
+		width 40px
+		height 40px
+		border-radius 50%
+		background-color rgba($accent-color, .15)
+		&--ic
+			display block
+			position absolute
+			position-center()
+			width 20px
+			height 20px
 		
+		svg
+			svg()
+			fill $accent-color
+		
+		&:hover
+			background-color  rgba($accent-color, 1)
+			svg
+				fill $light-color
+				
+	&__arrow
+		display inline-block
+		width 45px
+		height 45px
+		border-radius 50%
+		background-color transparent
+		position absolute
+		vertical-center()
+		z-index 2
+		&--ic
+			display block
+			position absolute
+			top 50%
+			left 50%
+			transform translate(-50%, -50%)
+			width 8px
+			height 13px
+		svg
+			svg()
+			fill $accent-color
+			
+		&--next
+			i
+				transform translate(-50%, -50%) scaleX(-1)
+				
+		&:hover
+			background-color $accent-color
+			svg
+				fill $light-color
+				
+		&.is-disabled
+			display none
+			
+	&__delete
+		display inline-block
+		width 18px
+		height 18px
+		opacity .4
+		background url('../img/icons/svg/cart_delete.svg') no-repeat
+		&:hover
+			opacity 1

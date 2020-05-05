@@ -248,4 +248,29 @@
 		.price
 			font 16px $Reg
 			color $dark-secondary-color
+
+
+.link-arrow
+	display inline-block
+	line-height 1
+	padding-left 15px
+	text-transform uppercase
+	font 12px $Bold
+	color $accent-color
+	position relative
+	&__ic
+		display block
+		width 5px
+		height 10px
+		position absolute
+		left 0
+		vertical-center()
+	
+	svg
+		svg()
+		fill $accent-color
 		
+	&:hover
+		color $secondary-color
+		svg
+			fill $secondary-color

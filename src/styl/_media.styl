@@ -55,6 +55,19 @@
 	// About
 	.page__header
 		min-height 560px
+		
+	// Product
+	.product
+		&__content
+			padding-left 40px
+			
+		&-slider
+			&__thumbnails--col
+				width 100px
+			&__main
+				height 435px
+				&--col
+					width calc(100% - 100px)
 			
 +max-screen(1300px)
 	// Header
@@ -611,7 +624,78 @@
 				display inline-block
 		
 
-		
+	// Product
+	.product
+		&__content
+			padding-left 30px
+			
+		&-slider
+			flex-wrap wrap
+			&__thumbnails--col
+				width 100%
+
+			&__main
+				height 435px
+				&--col
+					width 100%
+					padding-right 0
+					margin-bottom 20px
+					
+		&-slide
+			&__thumbnail
+
+				img
+					max-width 75%
+					max-height 75%
+					
+		&__information
+			margin-bottom 15px
+			
+		&__price
+			font-size 28px
+			margin-bottom 15px
+			
+		&__characteristics
+			font-size 16px
+			&--title
+				font-size 22px
+				margin-bottom 15px
+			ul
+				margin-bottom 15px
+	
+	// Cart
+	.cart
+		&__col
+			padding 10px
+			&:last-child
+				padding 0
+				width 18px
+				height 18px
+				position absolute
+				top 10px
+				right 5px
+
+			&:first-child
+				width 35%
+				
+		&__header
+			.cart__col
+				&:last-child
+					display none
+			
+		&-product
+			&__thumbnail
+				margin-right 15px
+				width 90px
+				height 90px
+				
+		&__price
+			font-size 16px
+			
+			&--total
+				font-size 18px
+				
+
 				
 +max-screen(1000px)
 	body
@@ -691,6 +775,14 @@
 			width 100%
 			height 400px
 			flex none
+			
+
+	// Product
+	.tab__controls
+		margin-bottom 40px
+	.btn__tab	
+		max-width 200px
+		padding 15px
 			
 +max-screen(800px)
 	// Header
@@ -819,6 +911,20 @@
 			
 		&__text
 			font-size 16px
+			
+	// Product
+	
+	// Product
+	.product
+		&__content
+			padding-left 0
+			width 100%
+		&-slider
+			width 100%
+			margin-bottom 25px
+			
+			
+
 						
 +max-screen(700px)
 	.btn__top
@@ -1093,6 +1199,41 @@
 			&--item
 				padding 10px
 				font-size 16px
+				
+	// Product
+	.btn__tab
+		max-width 100%
+		margin-bottom 10px
+		border-radius 100px !important
+		border 2px solid $accent-color !important
+		
+		&:last-child
+			margin-bottom 0
+			
+	.content
+		table
+			td
+				padding 10px
+				
+	// Cart
+	.cart
+		&__header
+			display none
+			
+		&__product
+			&--row
+				align-items stretch
+			&:first-child
+				border-top-left-radius 5px
+				border-top-right-radius 5px
+				border-top 1px solid $border-color	
+				
+		&__col
+			&--mobile-label
+				display block
+			&:first-child
+				width 100%
+				padding-right 25px
 			
 
 +max-screen(500px)
@@ -1401,6 +1542,82 @@
 		padding 0
 		&--header
 			padding 20px 10px
+	
+
+	// Product
+	.product
+		&-slider
+			&__main
+				height 300px
+				
+			.btn__arrow
+				&--prev
+					left -10px
+				&--next
+					right -10px
+		&-slide
+			&__main
+				padding 30px 10px 10px 10px
+				
+		&__brand
+			img
+				max-width 60px
+				
+	.btn__arrow
+		width 30px
+		height 30px
+		
+	
+	// Cart
+	.cart
+		&__total
+			padding 20px 0
+			margin-bottom 20px
+			&--text
+				font-size 16px
+				margin-right 15px
+			.row
+				justify-content flex-start
+		&__tools
+			.row
+				flex-direction column
+				align-items flex-start
+				
+			.link-arrow
+				order 2
+				margin-right 0
+				margin-top 20px
+				
+		&-product
+			&__thumbnail
+				width 75px
+				height 75px
+			
+		
+		&__col
+			width 100% !important
+			display flex
+			align-items center
+			justify-content flex-start
+			padding 0 10px
+			margin-bottom 10px
+			&:last-child
+				margin-bottom 0
+				width 18px !important
+			&:first-child
+				padding 10px 30px 20px 10px
+				margin-bottom 0
+			
+			
+			&--mobile-label
+				min-width 75px
+				margin-bottom 0
+				margin-right 10px
+				text-align left
+			
+
+			.product__quantity
+				margin 0
 
 +min-screen(2200px)
 	// Promo

@@ -4,12 +4,180 @@
 	<!-- CONTENT WRAPPER -->
 	<div class="content__wrapper">
 
+		{% include '../parts/components/popup.html' %}
+		{% include '../parts/components/go-to-top-button.html' %}
+		
+
 		<!-- Header -->
 		{% include '../parts/sections/header.html' %}
 		<!-- //Header -->
 
 		<!-- Main -->
 		<main class="main">
+
+			<section class="page gutter-bottom">
+				<h2 class="w3c">&nbsp;</h2>
+
+				<!-- Breadcrumbs -->
+				<div class="breadcrumbs">
+					<div class="container">
+						<ul class="breadcrumbs__list">
+							<li class="breadcrumbs__item"><a href="index.html" class="breadcrumbs__link">Главная</a></li>
+							<li class="breadcrumbs__item"><span class="breadcrumbs__link is-active">Корзина</span></li>
+						</ul>
+					</div>
+					<!-- //container -->
+				</div>
+				<!-- //Breadcrumbs -->
+				
+
+				<!-- Page content -->
+				<section class="page-content container">
+					<h1 class="sect__title">Корзина</h1>
+					
+					<!-- Cart -->
+					<div class="cart">
+						<div class="cart__header">
+							<div class="row align-horisontal-between cart__header--row">
+								<div class="cart__col">
+									<p class="cart__header--title">Товар</p>
+								</div>
+								<div class="cart__col">
+									<p class="cart__header--title">Цена</p>
+								</div>
+								<div class="cart__col">
+									<p class="cart__header--title">Количество</p>
+								</div>
+								<div class="cart__col">
+									<p class="cart__header--title">Стоимость</p>
+								</div>
+								<div class="cart__col">
+									<p class="cart__header--title">Удалить</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="cart__products">
+
+							<!-- Product -->
+							<div class="cart__product">
+								<div class="row align-vertical-center align-horisontal-between cart__product--row">
+
+									<div class="cart__col">
+										<div class="cart-product">
+											<a href="page-product.html" class="cart-product__thumbnail">
+												<img src="img/product/thumb-1.png" alt="">
+											</a>
+											<h2 class="cart-product__title text-left">
+												<a href="page-product.html">Умягчитель кабинетного типа Ecomaster 1,2 куб.м/ч (США)</a>
+											</h2>
+										</div>
+									</div>
+									<!-- //col -->
+
+									<div class="cart__col">
+										<span class="cart__col--mobile-label">Цена:</span>
+										<p class="price cart__price">163 000</p>
+									</div>
+									<!-- //col -->
+
+									<div class="cart__col">
+										<span class="cart__col--mobile-label">Кол-во:</span>
+										{% include '../parts/components/product/product-quantity.html' %}
+									</div>
+									<!-- //col -->
+
+									<div class="cart__col">
+										<span class="cart__col--mobile-label">Стоимость:</span>
+										<p class="price cart__price--total">5 163 000</p>
+									</div>
+									<!-- //col -->
+
+									<div class="cart__col">
+										<button class="btn__delete" type="button"></button>
+									</div>
+									<!-- //col -->
+
+								</div>
+							</div>
+							<!-- //Product -->
+
+							<!-- Product -->
+							<div class="cart__product">
+								<div class="row align-vertical-center align-horisontal-between cart__product--row">
+
+									<div class="cart__col">
+										<div class="cart-product">
+											<a href="page-product.html" class="cart-product__thumbnail">
+												<img src="img/product/thumb-3.png" alt="">
+											</a>
+											<h2 class="cart-product__title text-left">
+												<a href="page-product.html">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты</a>
+											</h2>
+										</div>
+									</div>
+									<!-- //col -->
+
+									<div class="cart__col">
+										<span class="cart__col--mobile-label">Цена:</span>
+										<p class="price cart__price">3 000</p>
+									</div>
+									<!-- //col -->
+
+									<div class="cart__col">
+										<span class="cart__col--mobile-label">Кол-во:</span>
+										{% include '../parts/components/product/product-quantity.html' %}
+									</div>
+									<!-- //col -->
+
+									<div class="cart__col">
+										<span class="cart__col--mobile-label">Стоимость:</span>
+										<p class="price cart__price--total">63 000</p>
+									</div>
+									<!-- //col -->
+
+									<div class="cart__col">
+										<button class="btn__delete" type="button"></button>
+									</div>
+									<!-- //col -->
+
+								</div>
+							</div>
+							<!-- //Product -->
+						</div>
+
+						<div class="cart__total">
+							<div class="row align-horisontal-end align-vertical-center">
+								<span class="cart__total--text">Всего на сумму:</span>
+								<p class="price cart__price--total">5 163 000</p>
+							</div>
+						</div>
+
+						<div class="cart__tools">
+							<div class="row align-vertical-center align-horisontal-end">
+
+								<a href="index.html" class="link-arrow letter-spacing">
+									<i class="link-arrow__ic">
+										<svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 5 9">
+											<path class="cls-1" d="M1258.35,1196c0.04,0.01.09,0.01,0.13,0.02,0.01,0.01.01,0.02,0.02,0.03h0.03c0.03,0.04.06,0.07,0.09,0.11a2.2,2.2,0,0,1,.33.35c0.01,0.01.02,0.01,0.03,0.02v0.07c0.07,0.08-.09.24-0.14,0.28-0.22.23-.45,0.46-0.68,0.68l-2.07,2.13c-0.17.17-.34,0.34-0.52,0.51a0.3,0.3,0,0,1-.05.07,0.751,0.751,0,0,0-.22.25,1.8,1.8,0,0,1,.27.28c0.06,0.05.12,0.1,0.18,0.16,0.14,0.15.28,0.3,0.43,0.45,0.43,0.44.87,0.88,1.3,1.32l0.66,0.69c0.17,0.16.33,0.33,0.5,0.49a0.763,0.763,0,0,1,.08.11,0.837,0.837,0,0,1,.28.31c-0.01.05-.01,0.1-0.02,0.14-0.03.03-.04,0.06-0.07,0.09-0.09.09-.18,0.18-0.27,0.26a0.52,0.52,0,0,1-.21.18c-0.05-.01-0.1-0.01-0.15-0.02l-1.02-1.02-2.17-2.23c-0.23-.23-0.47-0.47-0.71-0.7-0.03-.04-0.06-0.08-0.1-0.13a0.79,0.79,0,0,1-.29-0.36,0.191,0.191,0,0,1,0-.15c0.45-.46.91-0.93,1.36-1.4l1.96-1.99c0.31-.31.61-0.63,0.92-0.95h0.03c0.01-.01.01-0.02,0.02-0.03h0.07V1196Z" transform="translate(-1254 -1196)"/>
+										</svg>
+									</i>
+									<span>вернуться назад</span>
+								</a>
+
+								<button class="btn btn-accent" type="button">Оформить заказ</button>
+							</div>
+						</div>
+					</div>
+					<!-- //Cart -->
+					
+
+					
+				</section>
+				<!-- //Page content -->
+
+			</section>
+
 		</main>
 		<!-- //Main -->
 
