@@ -41,9 +41,9 @@
 		left 0
 		svg
 			svg()
-			fill $accent-color
+			fill $secondary-color
 	&:hover
-		color $accent-color
+		color $secondary-color
 	
 	&-light
 		color rgba($light-color, .6)
@@ -61,7 +61,7 @@
 	text-align center
 	display inline-block
 	padding 5px 8px
-	background-color $dark-secondary-color
+	background-color $secondary-color
 	color $light-color
 	border-radius 3px
 	horisontal-center()
@@ -80,7 +80,7 @@
 		height 0
 		border-style solid
 		border-width 0 5px 5px 5px
-		border-color transparent transparent $dark-secondary-color transparent
+		border-color transparent transparent $secondary-color transparent
 		position absolute
 		horisontal-center()
 		top -4px
@@ -159,14 +159,14 @@
 	&__link
 		display inline-block
 		line-height 1
-		color $darken-secondary-color
+		color $accent-color
 		margin-bottom 5px
 		font 22px $Med
 		white-space nowrap
 		&:last-child
 			margin-bottom 0
 		&:hover
-			color $accent-color
+			color $secondary-color
 			
 		&--sm
 			font-size 18px

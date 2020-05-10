@@ -342,6 +342,20 @@ $(document).ready(function() {
 
 	});
 
+	// ========= Ajax form ===========
+	$('.js-input').on('focus',function() {
+		if($(this).hasClass('is-error')) {
+			$(this).removeClass('is-error');
+		}
+	});
+
+	$('.js-toggle-checkout-details-btn').on('click', function(e) {
+		e.preventDefault();
+
+		$(this).toggleClass('is-active');
+		$('.js-checkout-details').stop().slideToggle(150);
+	});
+
 	var nonLinearSlider = document.getElementById('price');
 
 	if (nonLinearSlider) {

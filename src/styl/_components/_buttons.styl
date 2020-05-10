@@ -163,7 +163,7 @@
 			right 0
 			vertical-center()
 			border-radius 50%
-			background-color $dark-accent-color
+			background-color $secondary-color
 			flex-col-center()
 			padding 5px
 			width 60px
@@ -421,3 +421,33 @@
 		background url('../img/icons/svg/cart_delete.svg') no-repeat
 		&:hover
 			opacity 1
+			
+	&__checkout-toggle
+		display none
+		border 1px solid $border-color
+		position relative
+		width 100%
+		padding 15px
+		text-align left
+		font 14px $Med
+		color $accent-color
+		border-top-left-radius 5px
+		border-top-right-radius 5px
+		&:after
+			pseudo()
+			position absolute
+			width 20px
+			height 20px
+			background url('../img/icons/svg/header_menu_arrow_accent.svg') 50% 50% no-repeat / 10px 6px
+			position absolute
+			right 15px
+			vertical-center()
+			transition transform .17s ease-in-out
+		&:before
+			content 'Показать детали заказа'
+		&.is-active
+			&:after
+				transform translateY(-50%) rotate(180deg)
+			&:before
+				content 'Скрыть детали заказа'
+			

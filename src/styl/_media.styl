@@ -68,6 +68,17 @@
 				height 435px
 				&--col
 					width calc(100% - 100px)
+					
+
+	// Checkout
+	.checkout
+		padding-right 0
+		&__form
+			width 45%
+			max-width none
+		&-details__order--col
+			width 55%
+			max-width none
 			
 +max-screen(1300px)
 	// Header
@@ -695,7 +706,6 @@
 			&--total
 				font-size 18px
 				
-
 				
 +max-screen(1000px)
 	body
@@ -783,6 +793,23 @@
 	.btn__tab	
 		max-width 200px
 		padding 15px
+		
+	// Checkout
+	.checkout
+		padding-right 0
+		&__form
+			padding-right 15px
+		&-details__order--col
+			padding-left 15px
+			
+	.submit__row
+		flex-direction column
+		
+		.btn
+			order 1
+		.link-arrow
+			order 2
+			margin-top 25px
 			
 +max-screen(800px)
 	// Header
@@ -924,7 +951,40 @@
 			margin-bottom 25px
 			
 			
-
+	// Checkout
+	.btn__checkout-toggle
+		display block
+	.checkout
+		padding-right 0
+		&__form
+			width 100%
+			order 2
+			padding-right 0
+		&-details__order
+			
+			border-top-left-radius 0
+			border-top-right-radius 0
+			&--col
+				width 100%
+				order 1
+				padding-left 0
+				margin-bottom 35px
+			&--body
+				display none	
+			&--header
+				display none
+			&--title
+				font-size 18px
+				
+			&--footer
+				padding 15px
+				
+			&--product
+				padding 15px 30px 15px 15px
+				&_thumbnail
+					height 85px
+			
+	
 						
 +max-screen(700px)
 	.btn__top
@@ -1146,12 +1206,12 @@
 	// Feedbacks
 	.sect__feedback-form
 		padding-bottom 0
-	.feedback-form__row 
-		.feedback-form__input--wrapper
+	.form__row 
+		.form__input--wrapper
 			width 100%
 			padding-bottom 20px
 			
-	.feedback-form__input--wrapper
+	.form__input--wrapper
 		margin-bottom 20px
 		
 	// Catalog

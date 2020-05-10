@@ -89,21 +89,24 @@
 					<h2 class="sect__title container text-center">Оставьте Ваш отзыв</h2>
 
 					<div class="container">
-						<form  class="feedback-form text-center">
-							<div class="feedback-form__row row row-gutters">
-								<div class="feedback-form__input--wrapper">
-									<label for="feedbackName" class="feedback-form__label">Ваше имя*</label>
-									<input type="text" name="name" id="feedbackName" class="feedback-form__input">
+						<form  class="form feedbacks-form text-center">
+							<div class="form__row row row-gutters">
+								<div class="form__input--wrapper">
+									<label for="feedbackName" class="form__label">Ваше имя*</label>
+									<input type="text" name="name" id="feedbackName" class="form__input is-error js-input">
+									<span class="error">Это обязательное поле</span>
 								</div>
-								<div class="feedback-form__input--wrapper">
-									<label for="feedbackEmail" class="feedback-form__label">Ваш email*</label>
-									<input type="email" name="email" id="feedbackEmail" class="feedback-form__input">
+								<div class="form__input--wrapper">
+									<label for="feedbackEmail" class="form__label">Ваш email*</label>
+									<input type="email" name="email" id="feedbackEmail" class="form__input js-input">
+									<span class="error">Это обязательное поле</span>
 								</div>
 							</div>
 
-							<div class="feedback-form__input--wrapper">
-								<label for="feedbackMessage" class="feedback-form__label">Ваш отзыв*</label>
-								<textarea name="message" id="feedbackMessage" class="feedback-form__input textarea"></textarea>
+							<div class="form__input--wrapper">
+								<label for="feedbackMessage" class="form__label">Ваш отзыв*</label>
+								<textarea name="message" id="feedbackMessage" class="form__input textarea js-input"></textarea>
+								<span class="error">Это обязательное поле</span>
 							</div>
 
 							<button class="btn btn-accent" type="submit">Отправить</button>
