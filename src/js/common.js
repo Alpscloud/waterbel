@@ -363,10 +363,10 @@ $(document).ready(function() {
 		noUiSlider.create(nonLinearSlider, {
 			connect: true,
 			behaviour: 'tap',
-			start: [3000, 30000],
+			start: [0, 1000000],
 			range: {
 				'min': [0],
-				'max': [100000]
+				'max': [1000000]
 			}
 		});
 

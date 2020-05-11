@@ -355,6 +355,7 @@
 		display none
 		overflow hidden
 		transition none
+		max-height auto
 		&__col
 			width 100%
 			padding 0 10px 20px 10px
@@ -1294,7 +1295,13 @@
 			&:first-child
 				width 100%
 				padding-right 25px
-			
+	
+	.product__description--photos_row
+		margin-left -7.5px
+		margin-right -7.5px
+	.product__description--photos_col
+		width 50%
+		padding 7.5px
 
 +max-screen(500px)
 	// Header
@@ -1678,6 +1685,12 @@
 
 			.product__quantity
 				margin 0
+				
+	.product__description--photos_col
+		width 100%
+		padding 7.5px
+		a
+			padding-top 70%
 
 +min-screen(2200px)
 	// Promo

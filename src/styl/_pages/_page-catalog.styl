@@ -159,6 +159,10 @@
 		text-transform uppercase
 		font 12px $Bold
 		color $secondary-color
+		&.is-actual
+			color $actual-color
+		&.is-stock
+			color $stock-color
 			
 	&__tools
 		margin-top 25px
@@ -172,6 +176,12 @@
 			&__label,
 			&__price
 				color $stock-color
+	
+	&.is-actual
+		.product-card
+			&__label,
+			&__price
+				color $actual-color
 				
 
 .load-more

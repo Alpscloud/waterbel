@@ -1,0 +1,63 @@
+{% include '../parts/head.html' %}
+<body>
+	
+	<!-- CONTENT WRAPPER -->
+	<div class="content__wrapper">
+
+		{% include '../parts/components/popup.html' %}
+		{% include '../parts/components/go-to-top-button.html' %}
+		
+
+		<!-- Header -->
+		{% include '../parts/sections/header.html' %}
+		<!-- //Header -->
+
+		<!-- Main -->
+		<main class="main">
+
+			<section class="page gutter-bottom">
+				<h2 class="w3c">&nbsp;</h2>
+
+				<!-- Breadcrumbs -->
+				<div class="breadcrumbs">
+					<div class="container">
+						<ul class="breadcrumbs__list">
+							<li class="breadcrumbs__item"><a href="index.html" class="breadcrumbs__link">Главная</a></li>
+							<li class="breadcrumbs__item"><span class="breadcrumbs__link is-active">Результат поиска</span></li>
+						</ul>
+					</div>
+					<!-- //container -->
+				</div>
+				<!-- //Breadcrumbs -->
+				
+
+				<!-- Page content -->
+				<section class="page-content container">
+					<h1 class="sect__title text-center">Результат поиска по запросу "Название запроса"</h1>
+
+					<div class="text-center cart-empty">
+						<p>Извиниие, по Вашему запросу "название запроса" ничего не найдено</p>
+					</div>
+
+
+					
+				</section>
+				<!-- //Page content -->
+
+			</section>
+
+		</main>
+		<!-- //Main -->
+
+		<!-- Footer -->
+		{% include '../parts/sections/footer.html' %}
+		<!-- //Footer -->
+
+	</div>
+	<!-- //CONTENT WRAPPER -->
+
+	{% include '../parts/scripts.html' %}
+
+</body>
+
+</html>
