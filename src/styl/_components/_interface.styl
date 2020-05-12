@@ -183,6 +183,17 @@
 .fancy-link
 	position relative
 	overflow hidden
+	img
+		display block
+		position absolute
+		top 0
+		left 0
+		z-index -999
+		width 0.01px
+		height 0.01px
+		opacity 0
+		visibility hidden
+		pointer-events none
 	&:before
 		pseudo()
 		position absolute
