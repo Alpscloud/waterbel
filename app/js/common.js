@@ -1,4 +1,40 @@
+document.addEventListener('DOMContentLoaded', function() {
+
+	var fileInputs = document.querySelectorAll( '.input-file' );
+
+
+	Array.prototype.forEach.call( fileInputs, function( input ) {
+		var label    = input.nextElementSibling,
+		labelVal = label.innerHTML;
+
+		input.addEventListener('change', function(e) {
+			var fileName = '',
+			nextElem = label.nextElementSibling;
+
+			if(nextElem.classList.contains('is-active')) {
+				nextElem.classList.remove('is-active');
+			}
+
+			if( this.files && this.files.length > 1 ) {
+				fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
+			}
+			else {
+				fileName = e.target.value.split( '\\' ).pop();
+			}
+
+			if( fileName ) {	
+				nextElem.innerHTML = fileName;
+				nextElem.classList.add('is-active');
+			} else {
+
+				label.innerHTML = labelVal;
+			}
+		});
+	});
+
+});
 $(document).ready(function() {
+
 	//  ========= Variables =========
 	var body = $('body'),
 			html = body.width(),
@@ -353,6 +389,8 @@ $(document).ready(function() {
 		}
 
 	});
+
+
 
 	// ========= Ajax form ===========
 	$('.js-input').on('focus',function() {

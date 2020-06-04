@@ -812,6 +812,14 @@
 			order 2
 			margin-top 25px
 			
+	// Page form
+	.equipment-selection
+		&__block
+			padding-left 15px
+			padding-right 15px
+		&__col--title
+			font-size 16px
+			
 +max-screen(800px)
 	// Header
 	.header
@@ -1302,6 +1310,22 @@
 	.product__description--photos_col
 		width 50%
 		padding 7.5px
+		
+
+	// Page form
+	.equipment-selection
+		&__block--row
+			margin-left -15px
+			margin-right -15px
+		&__col
+			width 50%
+			padding 15px
+		&__files
+			&--col
+				width 100%
+				margin-bottom 30px
+				&:last-child
+					margin-bottom 0
 
 +max-screen(500px)
 	// Header
@@ -1317,6 +1341,9 @@
 				left 15px
 			.price
 				display none
+				
+			.dvizh-cart-price
+				display none
 			&__wrapper
 				min-width auto
 				height 30px
@@ -1326,6 +1353,9 @@
 				
 	.btn__phone
 		margin-left 15px
+		
+	.article-card__wrapper
+		width 100%
 	
 
 	// .category__link--menu
@@ -1691,6 +1721,21 @@
 		padding 7.5px
 		a
 			padding-top 70%
+
++max-screen(400px)
+	// Page form
+	.equipment-selection
+
+		&__col
+			width 100%
+			
+	.input-file__label
+		text-align left
+		font-size 11px
+		span
+			padding-left 20px
+			white-space nowrap
+	
 
 +min-screen(2200px)
 	// Promo
