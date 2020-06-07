@@ -346,34 +346,7 @@ $(document).ready(function() {
 		buttons: ['close']
 	});
 
-	// Sorting
-	$('.js-sorting-dropdown').on('click', function(e) {
-		e.preventDefault();
 
-		var target = $(e.target);
-
-		if(target.is('li')) {
-			var sortingValue = target.attr('data-sorting-value');
-			var sortingValueText = target.text();
-
-			if(target.hasClass('is-active')) {
-				$('.js-sorting-dropdown li').removeClass('is-active');
-				target.removeClass('is-active');
-			} else {
-				$('.js-sorting-dropdown li').removeClass('is-active');
-				target.addClass('is-active');
-			}
-
-			$('.js-sorting-input').val(sortingValue);
-			$('.js-sorting-text span').html(sortingValueText);
-			
-
-		} else {
-			return;
-		}
-
-		
-	});
 
 	$('.js-filter-toggle-block').on('click', function(e) {
 		e.preventDefault();

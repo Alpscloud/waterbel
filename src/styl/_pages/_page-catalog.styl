@@ -3,6 +3,11 @@
 	text-align center
 	position relative
 	cursor pointer
+	&-short
+		min-width auto !important
+		.sorting__dropdown--list
+			min-width 100px
+			
 	&:hover
 		.sorting
 			&__dropdown
@@ -78,7 +83,7 @@
 		
 		.sect__title
 			margin-bottom 0
-			margin-right 15px
+			width 25%
 			
 	&__products
 		width 75%
@@ -88,6 +93,14 @@
 			border 1px solid $border-color
 		
 			border-radius 5px
+			
+	&__tools
+		display flex
+		justify-content space-between
+		align-items center
+		width 100%
+		margin-bottom 30px
+		
 			
 
 .product-card

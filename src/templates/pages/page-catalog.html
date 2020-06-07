@@ -35,10 +35,16 @@
 				<section class="page-content container">
 					<h2 class="w3c">&nbsp;</h2>
 					
+					<h1 class="sect__title">Каталог товаров</h1>
 
-					<div class="catalog__header">
-						<div class="row align-vertical-center align-horisontal-between catalog__header--row">
-							<h1 class="sect__title">Каталог товаров</h1>
+					<div class="catalog gutter-bottom">
+
+						<!-- Aside filters -->
+						{% include '../parts/sections/aside.html' %}			
+						<!-- //Aside filters -->
+
+						<!-- Products -->
+						<div class="catalog__products">
 
 							<div class="catalog__tools">
 								<!-- Mobile filter -->
@@ -52,6 +58,26 @@
 									<span>Открыть фильтр</span>
 								</button>
 								<!-- //Mobile filter -->
+
+								<!-- Showing -->
+								<div class="sorting__wrapper">
+									<span class="sorting__label">Показывать по:</span>
+
+									<div class="sorting sorting-short">
+										<input type="hidden" name="showingQuantity" class="js-sorting-input">
+
+										<span class="sorting__text js-sorting-text"><span>12</span></span>
+
+										<div class="sorting__dropdown js-sorting-dropdown">
+											<ul class="sorting__dropdown--list">
+												<li class="sorting__dropdown--item is-active" data-sorting-value="по цене вниз">12</li>
+												<li class="sorting__dropdown--item" data-sorting-value="по цене вверх">24</li>
+												<li class="sorting__dropdown--item" data-sorting-value="по цене вверх">36</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<!-- //Showing -->
 
 								<!-- Sorting -->
 								<div class="sorting__wrapper">
@@ -72,19 +98,6 @@
 								</div>
 								<!-- //Sorting -->
 							</div>
-
-							
-						</div>
-					</div>
-
-					<div class="catalog gutter-bottom">
-
-						<!-- Aside filters -->
-						{% include '../parts/sections/aside.html' %}			
-						<!-- //Aside filters -->
-
-						<!-- Products -->
-						<div class="catalog__products">
 
 							<div class="catalog__products--row row align-horisontal-start">
 								{% include '../parts/components/product/product-cards.html' %}
