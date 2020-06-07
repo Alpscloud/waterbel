@@ -62,10 +62,13 @@
 			padding-left 40px
 			
 		&-slider
-			&__thumbnails--col
-				width 100px
+			&__thumbnails
+				.swiper-slide
+					height 100px !important
+				&--col
+					width 100px
 			&__main
-				height 435px
+				height 460px
 				&--col
 					width calc(100% - 100px)
 					
@@ -643,8 +646,11 @@
 			
 		&-slider
 			flex-wrap wrap
-			&__thumbnails--col
-				width 100%
+			&__thumbnails
+				.swiper-slide
+					height auto !important
+				&--col
+					width 100%
 
 			&__main
 				height 435px
@@ -655,8 +661,11 @@
 					
 		&-slide
 			&__thumbnail
-
+				height auto
+				padding-top 100%
 				img
+					position absolute
+					position-center()
 					max-width 75%
 					max-height 75%
 					

@@ -157,6 +157,14 @@
 		position relative
 		align-items flex-start
 		&__thumbnails
+			height 100%	
+			
+			.swiper-wrapper,
+			.swiper-container
+				height 100%
+				
+			.swiper-slide
+				height 140px !important
 			&--col
 				width 140px
 				
@@ -169,7 +177,7 @@
 			border-radius 5px
 			border 1px solid $border-color
 			position relative
-			height 600px
+			height 619px
 			
 			.btn__arrow
 				&--next
@@ -196,18 +204,16 @@
 			position relative
 			border 1px solid $border-color
 			border-radius 5px
-			padding-top 100%
+			height 100%
 			transition border-color .17s ease-in-out
 			cursor pointer
+			padding 10px
 			&:hover
 				border-color $accent-color
 				
 			img
 				@extends .content-img
-				max-width 90%
-				max-height 90px
-				position absolute
-				position-center()
+				
 
 .products-cards__slider
 	position relative
